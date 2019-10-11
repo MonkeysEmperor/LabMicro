@@ -1,0 +1,3460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0055)https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>labmicro-19</title>
+<!-- 2019-07-31 qua 12:07 -->
+
+<meta name="generator" content="Org-mode">
+<meta name="author" content="jk">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+<body>
+<div id="content">
+<h1 class="title">labmicro-19</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-1"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-05-07&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-05-09&gt;</span></span>  . E1: Introducao a microprocessadores, com ênfase ao ARM.</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-1-1">Explicar o curso, sequencia das aulas e avaliacao.</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-1-2">referência: ARM Laboratory Exercises, cap. 1</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-1-3">gnuarm e código "hello world".</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-1-3-1">Possiveis problemas ao seguir o post</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-1-4">Usando o gnuarm, rode o programa da pagina 2-3 da apostila ARM Lab (item 2-2).</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-1-4-1">Uma software interrupt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-05-14&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-05-16&gt;</span></span>  . E2: Programming Basics (cap2) + Data Processing Operations (cap3).</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-1">PLANEJAMENTO:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-2">OBJETIVO:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-3">Fazer todos os exercícios do item 2.4 pagina 2-8 da apostila usando o gnuarm.</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-3-1">2.4.1</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-3-2">2.4.2</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-3-3">2.4.3</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-4">Estude o capítulo 3 da apostila.</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-4-1">pg 3-7:</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-5">Faca os exercicios 3.10.1 a 3.10.4 da pagina 3-11, 3-12. Seguem comentarios sobre cada exercicio.</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-5-1">3.10.1 - Signed and unsigned addition</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-5-2">3.10.2 - Multiplicacao de numeros</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-5-3">3.10.3 - Multiplicacao pelo numero 32.</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-6">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E2.</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-2-7">Desempenho da classe:</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-3"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-05-21&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-05-23&gt;</span></span> . E3: Data Processing Operations (cap3).</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-3-1">PLANEJAMENTO:</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-3-1-1">A - leiam o capitulo 3 da apostila.</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-3-1-2">B - Respondam as seguintes perguntas numa folha a mão (o professor fará chamada oral antes da aula).</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-3-1-3">C - prepare a solucao de 3.10.7</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-3-2">OBJETIVO:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-3-3">DICAS e Observacoes:</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-3-3-1">3.10.5 -</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-3-3-2">3.10.6</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-3-3-3">3.10.7 Division</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-3-3-4">3.10.8</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-3-4">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E3.</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-3-5">Desempenho da classe:</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-4"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-05-28&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-05-30&gt;</span></span> . E4: Loads and Stores (cap4)</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-4-1">PLANEJAMENTO:</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-4-1-1">A Leia o capitulo 4.</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-4-1-2">B Respondam as questoes em uma folha �&nbsp; mão:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-4-1-3">C - rascunhe a solucao</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-4-2">OBJETIVO:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-4-3">Observacoes</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-4-3-1">Na apostila tem um erro no item:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-4-3-2">Comentários sobre os exercícios:</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-4-4">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E4.</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-5"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-04&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-06-06&gt;</span></span> . E5: Conditional Executiong Loops (cap5).</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-5-1">PLANEJAMENTO</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-5-1-1">A. Leia o Capitulo 5</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-5-1-2">B. Responda em uma folha de papel aa mao para entregar ao professor no comeco da aula - serve de base para a chamada oral individual.</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-5-1-3">C. IMPORTANTE: Fazer o rascunho de 5.5.4 em folha de papel rascunhado a mão; por exemplo, faça o diagrama de estados.</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-5-2">Objetivo</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-5-3">Observacoes</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-5-3-1">5.5.2</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-5-3-2">5.5.3</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-5-3-3">5.5.4</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-5-4">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E5.</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-6"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-11&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-06-13&gt;</span></span> . E6: Subroutines (cap6)</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-6-1">PLANEJAMENTO</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-6-1-1">A. Ler cap 6.</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-6-1-2">B. Responda (rascunho no papel)</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-6-1-3">C. IMPORTANTE</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-6-2">OBJETIVO</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-6-3">Observacoes</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-6-4">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E6.</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-6-5"><span class="timestamp-wrapper"><span class="timestamp">&lt;2018-06-21&gt;</span></span> feriado (Corpus Christi)</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-7"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-18&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-07-04&gt;</span></span> . P1 - Subroutines (cap6)</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-7-1">PLANEJAMENTO</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-7-2">Prova</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-7-3">Amostra de uma prova</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-7-3-1">tempo de prova</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-8"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-25&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-06-27&gt;</span></span> . E7: Memory Mapped Peripherals (cap7).</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-8-1">PLANEJAMENTO:</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-8-1-1">A. Leitura, alem do capt 7 da aposlita, consulte as seguintes referencias para fazer o planejamento:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-8-1-2">B. Rascunho de codigo</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-8-2">OBJETIVO</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-8-3">Observacoes</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-8-4">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E7.</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-9"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-02&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-07-11&gt;</span></span> . E8: C compiler + assembler - juntar C com assembly.</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-9-1">PLANEJAMENTO:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-9-2">Objetivos da aula de hoje:</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-9-2-1">compilar codigo assembly e codigo C e linkar ambos.</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-9-2-2">alterar o codigo C inserindo assembly no meio do código C.</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-9-2-3">observar como funciona a recursao.</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-9-3">Envie possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E8 e código fonte onde for necessário.</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-10"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-09&gt;</span></span>               - feriado (revolucao constitucionalista)</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-11"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-16&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-07-18&gt;</span></span> . E9: Hello World for bare metal</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-11-1">Planejamento:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-11-2">Experiencia</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-11-2-1">Rode o Simplest Bare Metal Program</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-11-2-2">Imprima "Hello World" na placa versatile emula pelo qemu</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-11-2-3">tratando a instrucao invalida em startup.s</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-11-2-4">Um Undefined Handler simples, porem errado.</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-11-2-5">A pilha no Undefined mode.</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-11-2-6">Undefined handler</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-11-2-7">modo kernel x modo usuario</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-11-3">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E9.</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-23&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-07-25&gt;</span></span> . E10: interrupcao de tempo no Versatile emulado.</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-1">Planejamento:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-2">Experiencia:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-3">Geracao do código</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-4">Observacao sobre o codigo</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-4-1">teste do INTPND</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-5">Corrija os ERROS na apostila</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-5-1">O código da apostila não inicializa adequadamente as pilhas na placa versatile</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-5-2">O retorno de IRQ é feito de forma ERRADA</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-5-3">Problema ao recuperar o cpsr anterior</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-5-4">Polemica - BNE x BLNE</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-6">Observe e faça pequenas alteracoes no codigo em assembly</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-6-1">examine no debuguer:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-6-2">desabilite as instrucoes</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-6-3">endereco do vetor de interrupcao</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-6-4">timer, inicializacao</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-6-5">Fazendo o tratamento da interrupcao em C.</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-12-7">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E10.</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-13"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-30&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-08-01&gt;</span></span> . E11: Chaveamento entre 2 processos.</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-13-1">Planejamento:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-13-2">Objetivo:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-13-3">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: lab micro E11.</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-14"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-08-06&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-08-08&gt;</span></span> Prova 2</a>
+<ul>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-14-1">preparacao</a></li>
+</ul>
+</li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-15">Avaliacao:</a></li>
+<li><a href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#sec-16">Referências:</a></li>
+</ul>
+</div>
+</div>
+<p>
+Lab. Microprocessadohres
+PCS3732 -  Curso Cooperativo 
+prof. Jorge Kinoshita.
+</p>
+
+<ol class="org-ol">
+<li>quadrimestre 2018
+</li>
+</ol>
+
+<p>
+Esse calendário contém as datas referentes das aulas para as turma de quinta-feira. no dia seguinte.
+</p>
+
+
+
+<p>
+turma1: Terca 13:30-17:10H
+turma2: Quinta 13:30-17:10H
+</p>
+
+
+<p>
+Aulas:
+</p>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-05-07&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-05-09&gt;</span></span>  . E1: Introducao a microprocessadores, com ênfase ao ARM.</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">Explicar o curso, sequencia das aulas e avaliacao.</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+O curso está dividido em 2 partes:
+</p>
+<ul class="org-ul">
+<li>referencia <sup><a id="fnr.1" name="fnr.1" class="footref" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fn.1">1</a></sup> de E1 até aula E8
+</li>
+<li>experiencias nossas de E8 ateh E11
+</li>
+</ul>
+<p>
+A referencia <sup><a id="fnr.2" name="fnr.2" class="footref" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fn.2">2</a></sup> complementa bem a referencia <sup><a id="fnr.1.100" name="fnr.1.100" class="footref" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fn.1">1</a></sup>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">referência: ARM Laboratory Exercises, cap. 1</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Ler o primeiro capítulo de <sup><a id="fnr.1.100" name="fnr.1.100" class="footref" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fn.1">1</a></sup>. 
+Fazer exercícios 1.7.1 e 1.7.2
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3">gnuarm e código "hello world".</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Faça com que o ARM imprima hello world de acordo com:
+<a href="http://linux-kernel-lab.blogspot.com.br/2018/04/basics-on-arm-processor.html">http://linux-kernel-lab.blogspot.com.br/2018/04/basics-on-arm-processor.html</a>
+Se tiver interesse, veja as referencias <sup><a id="fnr.3" name="fnr.3" class="footref" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fn.3">3</a></sup>, <sup><a id="fnr.4" name="fnr.4" class="footref" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fn.4">4</a></sup>, <sup><a id="fnr.5" name="fnr.5" class="footref" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fn.5">5</a></sup>, <sup><a id="fnr.6" name="fnr.6" class="footref" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fn.6">6</a></sup>.
+Ao rodar o gdb, veja os registradores:
+</p>
+<pre class="example">(gdb) înfo registers
+(gdb) p $pc   -&gt; apresenta os $pc como numero decimal
+(gdb) p/x $r0 -&gt; apresenta $r0 como numero hexadecimal
+(gdb) p/x $cpsr -&gt; apresenta o $cpsr como numero hexadecimal.
+</pre>
+</div>
+
+<div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1">Possiveis problemas ao seguir o post</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div><ul class="org-ul"><li><a id="sec-1-3-1-1" name="sec-1-3-1-1"></a>Problema de permissao ao rodar ./build<sub>docker</sub>.sh<br><div class="outline-text-5" id="text-1-3-1-1">
+<p>
+Este erro acontece nas maquinas do lab micro, mas nao costuma acontecer em seu computador pessoal. Para corrigir, na maquina do lab, faca:
+</p>
+<pre class="example">~/gcc-arm$ sudo ./build_docker.sh
+</pre>
+</div>
+</li>
+<li><a id="sec-1-3-1-2" name="sec-1-3-1-2"></a>Nao tem permissao para criar arquivo hello.c em src<br><div class="outline-text-5" id="text-1-3-1-2">
+<p>
+Este erro acontece nas maquinas do lab micro, mas nao costuma acontecer em seu computador pessoal. Para corrigir, na maquina do lab, faca:
+</p>
+<pre class="example">~/gcc-arm$ chmod 777 src
+</pre>
+</div>
+</li></ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4">Usando o gnuarm, rode o programa da pagina 2-3 da apostila ARM Lab (item 2-2).</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Observe que vc. deverá colocar o programa no formato GNU. 
+Uma forma de fazer isso é observar o hello.s e fazer as modificacoes. Em caso de dúvidas sobre as diretivas, consulte os manuais em <a href="https://sourcery.mentor.com/sgpp/lite/arm/portal/release830">https://sourcery.mentor.com/sgpp/lite/arm/portal/release830</a>; em particular consule o manual do GNU Assembler.
+A modificação já feita do codigo assembly do item 2-2 fica assim no gnumarm:
+</p>
+<pre class="example">---------------------------------------------------
+
+	.text
+	.globl main
+main:
+	MOV	r0, #15			
+	MOV	r1, #20
+	BL	firstfunc		
+	MOV	r0, #0x18		
+	LDR	r1, =0x20026		
+	SWI	0x123456		
+firstfunc:
+	ADD	r0, r0, r1		
+	MOV	pc, lr			
+--------------------------------------------------
+</pre>
+<p>
+Para isso vc. pode fazer:
+</p>
+
+<p>
+gedit item-2-2.s
+e fazer o copy and paste.
+</p>
+</div>
+
+<div id="outline-container-sec-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1">Uma software interrupt</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+No código temos:
+</p>
+<pre class="example">LDR	r1, =0x20026		
+SWI	0x123456
+</pre>
+<p>
+que se refere a uma software interrupt pedindo um servico do monitor da placa evaluator7t. Como estamos rodando de forma simulada, essa software interrupt irá travar o gdb. Assim, nao rodem o SWI (basta colocar um breakpoint).
+Uma pergunta interessante é:
+</p>
+<ul class="org-ul">
+<li>qual a diferenca entre LDR e MOV? Observem que ambas as instrucoes carregaram valores imediatos nos registradores. A diferenca é que com LDR é possível carregar valores quaisquer de 32 bits enquanto que com o MOV não. Isso será importante para a questao 3.10.1
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-05-14&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-05-16&gt;</span></span>  . E2: Programming Basics (cap2) + Data Processing Operations (cap3).</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+A apostila "ARM Laboratory Exercises" roda código feito para o codewarrior/freescale e não para o gnuarm. Portanto, ADAPTEM o código da apostila para rodar no gnuarm como feito na aula passada, exemplo do item 2-2 da apostila.
+</p>
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">PLANEJAMENTO:</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Para essa aula não é necessário planejamento.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">OBJETIVO:</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>capítulo 2 e parte do 3 da apostila, mas ao invés de usarmos o codewarrior para windows estaremos usando o gnuarm no linux ubuntu.
+cap2: todo o item 2.4: de 2.4.1 a 2.4.3
+</li>
+</ul>
+<p>
+cap3: Faca de 3.10.1 ateh 3.10.4  
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3">Fazer todos os exercícios do item 2.4 pagina 2-8 da apostila usando o gnuarm.</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Observacao sobre os exercicios
+As perguntas do item 2.4 se referem ao codewarrior (ambiente usado pela apostila no lugar do gnuarm); por isso pensem nas questoes referindo-se ao gnuarm.
+</p>
+</div>
+<div id="outline-container-sec-2-3-1" class="outline-4">
+<h4 id="sec-2-3-1">2.4.1</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+No ambiente codewarrior existe um make. Durante o nosso curso, nao precisaremos do make uma vez que o proprio arm-elf-gcc dispara o assembler e o linker. Para ver o que foi gerado pelo arm-elf-gcc basta fazer:
+</p>
+<hr>
+<p>
+$ ls -alt|more
+</p>
+<hr>
+<p>
+Esse comando coloca no topo os arquivos recentemente modificados ou criados.
+Apenas relatem o que foi feito - uso do arm-elf-gcc, geracao do arquivo e arm-elf-gdb para rodá-lo.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-2" class="outline-4">
+<h4 id="sec-2-3-2">2.4.2</h4>
+<div class="outline-text-4" id="text-2-3-2">
+</div><ul class="org-ul"><li><a id="sec-2-3-2-1" name="sec-2-3-2-1"></a>step x next<br><div class="outline-text-5" id="text-2-3-2-1">
+<p>
+A pergunta 2.4.2 pergunta sobre a diferenca entre step e stepin no codewarrior . Para o gdb, a pergunta se refere a:
+step: passo a passo entrando na rotina
+next: passo a passo mas sem entrar na rotina. 
+Existe um problema GRAVE no uso do next. O arm-elf-gdb misteriosamente se perde ao ver um label como:
+</p>
+
+<pre class="example">  mov r0,1
+label:
+  move r0,2
+</pre>
+<p>
+Ao executar mov r0,1; o debugger nao pula para a instrucao seguinte usando next. Por isso, muito preferencialmente use 'step'.
+</p>
+</div>
+</li>
+
+<li><a id="sec-2-3-2-2" name="sec-2-3-2-2"></a>Problema ao executar SWI<br><div class="outline-text-5" id="text-2-3-2-2">
+<p>
+A instrucao SWI        0x123456 eh uma interrupcao de software que roda no programa monitor que estah na flash da placa Evaluator-7T. Nós estamos simulando a execucao do codigo no gdb (target sim). O simulador nao possui o tratamento para essa interrupcao de software, por isso,  coloque um breakpoint na linha onde estah a instrucao SWI (ex: linha 9) atraves de "b 9" e rode ateh lah. Dado que estamos sem monitor ou sistema operacional, estaremos sempre fazendo dessa forma: colocando um breakpoint no final do programa para observarmos se rodou ateh o final.
+</p>
+</div>
+</li></ul>
+</div>
+
+<div id="outline-container-sec-2-3-3" class="outline-4">
+<h4 id="sec-2-3-3">2.4.3</h4>
+<div class="outline-text-4" id="text-2-3-3">
+<p>
+Se quisermos ver os registradores na tela do arm-elf-gdb usando C-x 2, teremos dois formatos hexa e decimal. Porém, é possível observar memória e registradores em outros formatos. Veja o manual do gdb - <a href="http://sourceware.org/gdb/download/onlinedocs/gdb/index.html">http://sourceware.org/gdb/download/onlinedocs/gdb/index.html</a>
+Exemplos:
+</p>
+<pre class="example">p/x $pc
+p/x $cpsr
+x/i $pc
+</pre>
+<p>
+Usando o help
+ help x
+ help p
+</p>
+
+<p>
+Voce deve ter observado que 
+x - serve para ver memoria externa. 
+</p>
+<pre class="example">x/d $r1
+</pre>
+<p>
+apresenta o conteudo de r1 em hexadecimal e o conteudo apontado por r1 na memoria em decimal.
+</p>
+
+<pre class="example">p/d $r1
+</pre>
+<p>
+apresenta o conteudo de r1 em decimal.
+</p>
+
+<p>
+Uma forma !!!PERIGOSA!!! de ver os bits do registrador de status eh:
+</p>
+<pre class="example">p/t $cpsr
+</pre>
+<p>
+porem, os primeiros zeros serao OMITIDOS e voce pode estar vendo menos que 32 bits. Tome cuidado! Compare o cpsr com o comando "info registers".
+A forma segura eh:
+</p>
+<pre class="example">p/x $cpsr
+</pre>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4">Estude o capítulo 3 da apostila.</h3>
+<div class="outline-text-3" id="text-2-4">
+</div><div id="outline-container-sec-2-4-1" class="outline-4">
+<h4 id="sec-2-4-1">pg 3-7:</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<p>
+ADD r0, r1, #0xc5, ROR 10
+ver desenho na pagina 3-6.
+</p>
+
+<p>
+1100 0101 para a direita em um registrador de 32 bits
+</p>
+
+<p>
+depois de rodar 8 vezes temos
+</p>
+
+<p>
+1100 0101 0000 �
+e depois de 10 vezes temos:
+</p>
+
+<p>
+0011 0001 0100 � 
+</p>
+
+<p>
+o que fornece um o resultado da apostila:
+</p>
+
+<p>
+31 40 00 00
+0011 0001 0100 0000 0000  0000 0000 0000
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5">Faca os exercicios 3.10.1 a 3.10.4 da pagina 3-11, 3-12. Seguem comentarios sobre cada exercicio.</h3>
+<div class="outline-text-3" id="text-2-5">
+</div><div id="outline-container-sec-2-5-1" class="outline-4">
+<h4 id="sec-2-5-1">3.10.1 - Signed and unsigned addition</h4>
+<div class="outline-text-4" id="text-2-5-1">
+<p>
+Use LDR para carregar valores de 32 bits em registradores.
+Ao inves de fazer:
+</p>
+<pre class="example">mov r1,#0x12345678
+</pre>
+<p>
+faça:
+</p>
+<pre class="example">ldr r1,=0x12345678
+</pre>
+</div>
+
+<ul class="org-ul"><li><a id="sec-2-5-1-1" name="sec-2-5-1-1"></a>Cuidado com as flags<br><div class="outline-text-5" id="text-2-5-1-1">
+<p>
+ADD nao atualiza as flags do CPSR;
+ADDS atualiza as flags do CPSR.
+Igualmente SUB x SUBS, MOV x MOVS, etc.  
+</p>
+</div>
+</li>
+
+<li><a id="sec-2-5-1-2" name="sec-2-5-1-2"></a>Carry x overflow<br><div class="outline-text-5" id="text-2-5-1-2">
+<p>
+Se representarmos numeros em 4 bits em complemento de 2, podemos representar desde o -8 ateh o 7. Ao somarmos -1 e 1 temos carry mas nao temos overflow. Somando 5+4, temos que 9&gt;7 e portanto temos o overflow.
+</p>
+</div>
+</li>
+
+<li><a id="sec-2-5-1-3" name="sec-2-5-1-3"></a>signed x unsigned<br><div class="outline-text-5" id="text-2-5-1-3">
+<p>
+Na apostila: Does their meaning change when the data values are unsigned numbers? Numa representacao de 4 bits unsigned, os numeros variam de 0 a 15. Assim, ao somarmos 7+2, obtemos 9 que pode ser representado como unsigned e nao pode ser representado em 4 bits unsigned. Assim, OVERFLOW para unsigned deve ser visto olhando a flag CARRY e a OVERFLOW em si, deixa de ter sentido.
+</p>
+</div>
+</li></ul>
+</div>
+
+<div id="outline-container-sec-2-5-2" class="outline-4">
+<h4 id="sec-2-5-2">3.10.2 - Multiplicacao de numeros</h4>
+<div class="outline-text-4" id="text-2-5-2">
+<ul class="org-ul">
+<li>no resultado tivemos a flag N setada, embora multiplicamos dois numeros negativos (e o resultado deveria ser positivo). A instrucao MULS, multiplica 2 numeros de 32 bits e coloca o resultado em um numero de 32 bits. Isso nao funciona bem. Vamos pensar em numeros de 4 bits variando de -8 a 7 em complemento de 2. Se multiplicarmos -1 e -8 em complemento de 2, temos +8. Porem, 8 nao pode ser representado em complemento de 2, 4 bits. A apostila quer mostrar que as flags foram atualizadas erradas nessa instrucao. Na verdade, nem as flags e nem o conteudo dos registradores eh confiavel dado que nao se consegue sempre multiplicar 2 numeros de 32 bits e colocar o resultado em 32 bits. O certo eh colocar o resultado em um numero de 64 bits. Para entender melhor veja no site da ARM, a especificacao da instrucao MUL: <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0068b/CIHIHGGJ.html">http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0068b/CIHIHGGJ.html</a> . Se quisermos observar o bottom (32 bits menos significativos) em MULS contendo o numero todo, temos que multiplicar numeros que caibam em representacoes de 16 bits.
+</li>
+</ul>
+</div>
+
+<ul class="org-ul"><li><a id="sec-2-5-2-1" name="sec-2-5-2-1"></a>Why is there a need for two separate long multiply instructions, UMULL and SMULL?<br><div class="outline-text-5" id="text-2-5-2-1">
+<p>
+Ambas as instrucoes multiplicam 2 numeros de 32 bits e colocam o resultado de 64 bits em 2 registradores: um mais signficativo e outro menos significativo. O resultado eh diferente se o numero eh signed ou unsigned. Por exemplo: pensando em multiplicar 2 numeros de 4 bits, temos no caso de 1111 = 15(unsgined) ou (-1) signed. 15*15 eh um resultado totalmente diferente de (-1) * (-1). Daih a necessidade de UMULL e SMULL. Observe que se o resultado eh colocado em 2 registradores, como R0(mais signficativo) e R1; entao apenas o bit mais significativo de R0 eh quem diz se &lt;R0,R1&gt; eh positivo ou negativo.
+</p>
+</div>
+</li>
+
+
+<li><a id="sec-2-5-2-2" name="sec-2-5-2-2"></a>Pequeno erro:<br><div class="outline-text-5" id="text-2-5-2-2">
+<p>
+Obs: Na apostila ARM Lab Manual temos na pg 3-5
+   UMULL r6, r8, r0, r1 ; {r6,r8} = r0 × r1
+onde aparentemente r6 eh o mais significativo. Pelo site da ARM temos que o r6 (primeiro argumento) eh o menos significativo.
+</p>
+</div>
+</li></ul>
+</div>
+
+<div id="outline-container-sec-2-5-3" class="outline-4">
+<h4 id="sec-2-5-3">3.10.3 - Multiplicacao pelo numero 32.</h4>
+<div class="outline-text-4" id="text-2-5-3">
+<ul class="org-ul">
+<li>pense em algum shift.
+</li>
+<li>use MOV com deslocamento. Veja: <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0552a/BABHGAJI.html">http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0552a/BABHGAJI.html</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2-6" class="outline-3">
+<h3 id="sec-2-6">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E2.</h3>
+</div>
+
+<div id="outline-container-sec-2-7" class="outline-3">
+<h3 id="sec-2-7">Desempenho da classe:</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+algumas equipes nao conseguiram terminar todos os exercicios.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-05-21&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-05-23&gt;</span></span> . E3: Data Processing Operations (cap3).</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">PLANEJAMENTO:</h3>
+<div class="outline-text-3" id="text-3-1">
+</div><div id="outline-container-sec-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1">A - leiam o capitulo 3 da apostila.</h4>
+</div>
+<div id="outline-container-sec-3-1-2" class="outline-4">
+<h4 id="sec-3-1-2">B - Respondam as seguintes perguntas numa folha a mão (o professor fará chamada oral antes da aula).</h4>
+<div class="outline-text-4" id="text-3-1-2">
+</div><ul class="org-ul"><li><a id="sec-3-1-2-1" name="sec-3-1-2-1"></a>1. O que há de errado nas seguintes instrucoes:<br><div class="outline-text-5" id="text-3-1-2-1">
+<pre class="example">a. ADD r3,r7, #1023
+b. SUB r11, r12, r3, LSL #32
+</pre>
+
+<p>
+Sugestao:
+</p>
+<ul class="org-ul">
+<li>vejam os codigos de maquinas e observem que certos numeros nao servem para fazer o codigo de maquina.
+</li>
+<li>coloquem no gnuarm e vejam o erro.
+</li>
+</ul>
+</div>
+</li>
+
+<li><a id="sec-3-1-2-2" name="sec-3-1-2-2"></a>2. Sem usar a instrucao MUL, de as seguintes instrucoes para multiplicar o registrador R4 por:<br><div class="outline-text-5" id="text-3-1-2-2">
+<pre class="example">a. 132
+b. 255
+c. 18
+d. 16384
+</pre>
+
+<p>
+Dicas (apenas para pensar em como resolver os itens a,b,d,e acima):
+</p>
+<ul class="org-ul">
+<li>como vc. faria para multiplicar um valor por 4? Dica: use o MOV com o deslocamento. r1 = 4*r0
+</li>
+<li>como vc. faria para multiplicar um valor por 5? Dica: use ADD com deslocamento - r1 = r0+4*r0
+</li>
+<li>como vc. faria para multiplicar um valor por 3? r1 = r0*4 - r0; veja a diferenca entre SUB e RSB
+</li>
+<li>como vc. faria para multiplicar um numero por 15? Multiplica por 3 e depois por 5.
+</li>
+</ul>
+</div>
+</li>
+
+<li><a id="sec-3-1-2-3" name="sec-3-1-2-3"></a>3. Escreve uma rotina que compara 2 valores de 64-bits usando somente 2 instrucoes. (dica: a segunda instrucao é condicionalmente executada, baseada no resultado da primeira comparacao).<br></li>
+
+<li><a id="sec-3-1-2-4" name="sec-3-1-2-4"></a>4. Escreva uma rotina que desloque um valor de 64-bits (armazenado em 2 registradores r0 e r1) de um bit para a direita.<br></li>
+
+<li><a id="sec-3-1-2-5" name="sec-3-1-2-5"></a>5. idem 4, para a esquerda.<br></li></ul>
+</div>
+
+
+<div id="outline-container-sec-3-1-3" class="outline-4">
+<h4 id="sec-3-1-3">C - prepare a solucao de 3.10.7</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li>tragam numa folha (nao vale no computador), a solucao rascunhada a mão do exercicio de divisao 3.10.7; ou seja, como é o algoritmo da divisao. Nao eh para trazer todo o algoritmo em codigo ARM já implementado, mas se quiser coloque algumas partes em codigo ARM. A operacao de divisao deve ser feita com shift como faz a profa. do primário e nao o algoritmo ineficiente e simples que retira um numero do outro.
+</li>
+</ul>
+<p>
+Veja: <a href="http://courses.cs.vt.edu/~cs1104/Division/ShiftSubtract/Shift.Subtract.html">http://courses.cs.vt.edu/~cs1104/Division/ShiftSubtract/Shift.Subtract.html</a> e coloque no papel a simulacao de 1101 dividido por 10.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">OBJETIVO:</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>terminar capítulo 3 da apostila. Fazer os exercicios de 3.10.5 ateh 3.10.8
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3">DICAS e Observacoes:</h3>
+<div class="outline-text-3" id="text-3-3">
+</div><div id="outline-container-sec-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1">3.10.5 -</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+nao percam tempo com a restricao da apostila: usem instrucoes condicionais para facilitar. No cap. 5 da apostila existe uma tabela com todas as condicoes possiveis. De preferencia, facam primeiro o exercicio 3.10.6 . Pequeno erro do UMULL na apostila explicado no item 3.10.2
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-3-2" class="outline-4">
+<h4 id="sec-3-3-2">3.10.6</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+Uma dica para se ter o absoluto de um numero eh fazer (zero - numero) caso o numero seja negativo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3-3" class="outline-4">
+<h4 id="sec-3-3-3">3.10.7 Division</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<p>
+o arm-elf-gcc nao estah compilando uma instrucao que lide com RRX como
+ mov � RRX
+porem compila outras como
+ mov � ROR
+</p>
+
+<p>
+Teste que deve funcionar:
+</p>
+<ul class="org-ul">
+<li>1234567 por 1234
+</li>
+</ul>
+
+<p>
+Teste que talvez falhe:
+</p>
+<ul class="org-ul">
+<li>123456789 por 1234
+</li>
+</ul>
+<p>
+Nao precisa de se preocupar caso esteja falhando para codigos onde o bit de sinal do dividendo seja 1.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3-3-4" class="outline-4">
+<h4 id="sec-3-3-4">3.10.8</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<ul class="org-ul">
+<li>Erro1: Em:  "The 2-bit Gray code occupies only bits [7:0] of r1, and the 3-bit Gray code occupies only bits [23:0] of r2."; deveriamos ter the 3-bit Gray code occupies only bits [15:0]
+</li>
+<li>Erro2 na apostila ARM Lab Manual: A sequencia b010 011 001 000 101 111 110 100 nao eh um codigo de gray de 3 bits (ex: erro ao passar de 000 para 101 alterando dois bits). O codigo pode ser 
+</li>
+</ul>
+<p>
+000 001 011 010 110 111 101 100. Se tiver duvidas em como se forma o codigo gray, consulte o wikipedia.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E3.</h3>
+</div>
+
+<div id="outline-container-sec-3-5" class="outline-3">
+<h3 id="sec-3-5">Desempenho da classe:</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+metade das equipes nao conseguiu implementar o 3.10.8 (mas vale a pena implementar?). O 3.10.8 poderia ser visto como um exercicio extra ou ainda eliminado.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-05-28&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-05-30&gt;</span></span> . E4: Loads and Stores (cap4)</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">PLANEJAMENTO:</h3>
+<div class="outline-text-3" id="text-4-1">
+</div><div id="outline-container-sec-4-1-1" class="outline-4">
+<h4 id="sec-4-1-1">A Leia o capitulo 4.</h4>
+</div>
+<div id="outline-container-sec-4-1-2" class="outline-4">
+<h4 id="sec-4-1-2">B Respondam as questoes em uma folha �&nbsp; mão:</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+B.1) Descreva o conteúdo do registrador R13 ou sp depois que as seguintes instruções forem executadas, assumindo que a memória contenha os valores mostrados abaixo. O registrador R0 contém 0x24, e o sistema de memória é little-endian (o menos significativo é colocado no endereco mais baixo).
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="right">
+
+<col class="right">
+</colgroup>
+<tbody>
+<tr>
+<td class="right">Endereço</td>
+<td class="right">Conteúdo</td>
+</tr>
+
+<tr>
+<td class="right">0x24</td>
+<td class="right">0x06</td>
+</tr>
+
+<tr>
+<td class="right">0x25</td>
+<td class="right">0xFC</td>
+</tr>
+
+<tr>
+<td class="right">0x26</td>
+<td class="right">0x03</td>
+</tr>
+
+<tr>
+<td class="right">0x27</td>
+<td class="right">0xFF</td>
+</tr>
+</tbody>
+</table>
+
+<pre class="example">LDRSB sp, [r0]
+LDRSH sp, [r0]
+LDR sp,[r0]
+LDRB sp,[r0]
+</pre>
+
+<p>
+B.2) Indique se as seguintes instruções usam o modo pré ou pós indexado de endereçamento:
+</p>
+<pre class="example">STR r6, [r4,#4]
+LDR r3, [r12], #6
+LDRB r4, [r3,r2]!
+LDRSH r12, [r6]
+</pre>
+
+
+<p>
+B.3) Calcule o endereço efetivo das seguintes instruções se o registrador r3 = 0x4000 e o registrador r4 = 0x20
+</p>
+<pre class="example">STRB r9, [r3,r4]
+LDRB r8,[r3,r4,LSL #3]
+LDR r7, [r3], r4
+STRB r6, [r3], r4, ASR #2
+</pre>
+
+
+<p>
+    B.4)  O que há de errado na seguinte instrução?
+Veja "incorrect example" em:
+<a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0068b/Chdbifed.html">http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0068b/Chdbifed.html</a>
+</p>
+<pre class="example">LDRSB r1,[r6],r3,LSL #4
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4-1-3" class="outline-4">
+<h4 id="sec-4-1-3">C - rascunhe a solucao</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<p>
+Cada equipe deve trazer numa folha de papel a resposta em letra de mao (nada de coisa impressa) para a seguinte pergunta. Escreva o código em Assembly que faça:
+</p>
+<pre class="example">for (i=0; i&lt;8; i++) {
+  a[i] = b[7-i];
+}
+</pre>
+<p>
+Vai ter mais nota quem colocar o programa mais proximo da realidade; ou seja, evitem usar pseudo instrucoes.
+Para observar um codigo bem proximo da realidade, sugiro instalar o gnuarm na maquina de voces e testar.
+Procurem usar as seguintes instrucoes em seu código:
+LDR ou ADR (isto é: declarem os dados na memória e leiam de lá; por exemplo, onde comeca o a array b e a array a).
+BGE (usem instrucoes que facam o desvio condicional, nao necessariamente BGE).
+RSB (para o 7-i)
+STR (isto é: armazene de fato o dado na memória).
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2">OBJETIVO:</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Fazer os exercicios do capitulo 4.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3">Observacoes</h3>
+<div class="outline-text-3" id="text-4-3">
+</div><div id="outline-container-sec-4-3-1" class="outline-4">
+<h4 id="sec-4-3-1">Na apostila tem um erro no item:</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+4.3.1 Direct loading with MOV and MVN
+</p>
+<pre class="example">MOV r0, #0x1, 30 ; r0 = 1020         32 - 30 = 2; 2 ** 2 = 4 portanto pula de 4 em 4.
+MOV r0, #0xFF, 28 ; r0 = 4080        32 - 28 = 4; 2 ** 4 = 16 portanto pula de 16 em 16.
+MOV r0, #0x1, 26	 ; r0 = 4096   32 - 26 = 6; 2 ** 6 = 64 portanto pula de 64 em 64.
+</pre>
+<p>
+mas na realidade eh:
+</p>
+<pre class="example">│0x8218 &lt;main&gt;           mov    r0, #4           1 *4 = 4                                 │
+│0x821c &lt;main+4&gt;         mov    r0, #4080        255 * 16 = 4080                          │
+│0x8220 &lt;main+8&gt;         mov    r0, #64 ; 0x40   1 * 64 = 64.
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3-2" class="outline-4">
+<h4 id="sec-4-3-2">Comentários sobre os exercícios:</h4>
+<div class="outline-text-4" id="text-4-3-2">
+</div><ul class="org-ul"><li><a id="sec-4-3-2-1" name="sec-4-3-2-1"></a>4.5.1<br><div class="outline-text-5" id="text-4-3-2-1">
+<p>
+Assignments with operands in memory
+Assume an array of 25 words. A compiler associates variables x and y with registers r0
+and r1, respectively. Assume that the base address for the array is located in r2.
+Translate this C statement/assignment using the post-indexed form:
+</p>
+
+<pre class="example">x = array[5] + y
+</pre>
+<p>
+Now try writing it using the pre-indexed form.
+Apenas crie um programa em assembly que use o LDR de forma pre indexada e pos indexada. Force para que os valores nos registradores caiam na posicao array + 5*4 (array de 4 bytes para cada elemento) em ambos os caso.
+</p>
+
+<p>
+Uma forma simples de se declarar dados, por exemplo, uma array, estah em <a href="http://www.coranac.com/tonc/text/asm.htm">http://www.coranac.com/tonc/text/asm.htm</a> :
+</p>
+
+<pre class="example">    mov     r2, #1
+@ Byte loads
+    adr     r0, bytes
+    ldrb    r3, bytes       @ r3= bytes[0];     // r3= 0x000000FF= 255
+    ldrsb   r3, bytes       @ r3= (s8)bytes[0]; // r3= 0xFFFFFFFF= -1
+    ldrb    r3, [r0], r2    @ r3= *r0_b++;      // r3= 255, r0++;
+@ Halfword loads
+    adr     r0, hwords
+    ldrh    r3, hwords+2    @ r3= words[1];     // r3= 0x0000FFFF= 65535
+    ldrsh   r3, [r0, #2]    @ r3= (s16)r0_h[1]; // r3= 0xFFFFFFFF= -1
+    ldrh    r3, [r0, r2, lsl #1]    @ r3= r0_h[1]? No! Illegal instruction :(
+
+@ Byte array: u8 bytes[3]= { 0xFF, 1, 2 };
+bytes:
+    .byte   0xFF, 1, 2
+@ Halfword array u16 hwords[3]= { 0xF001, 0xFFFF, 0xF112 };
+    .align  1    @ align to even bytes REQUIRED!!!
+hwords:
+    .hword  0xF110, 0xFFFF, 0xF112
+</pre>
+
+<p>
+Para observar os dados na memória dentro do gdb, voce pode fazer
+</p>
+<pre class="example">x/20 0x100
+</pre>
+<p>
+para ver 20 words a partir de 0x100
+</p>
+<pre class="example">x/21h hwords // hwords eh o label no codigo acima
+</pre>
+<p>
+para ver 21 half words a partir do label hwords.
+</p>
+<pre class="example">x/20db array // hwords eh o label no codigo acima
+</pre>
+<p>
+para ver 20 bytes em formato decimal a partir do label array
+</p>
+
+
+<p>
+Terminando este item pule para o 4.5.2, lembrando que mais referencias estao em:
+<a href="http://www.coranac.com/tonc/text/asm.htm">http://www.coranac.com/tonc/text/asm.htm</a> : pagina mostrando diversos codigos e dados para o gnu assembler
+</p>
+
+<p>
+<a href="http://www.microcross.com/gnu-arm7t-microcross.pdf">http://www.microcross.com/gnu-arm7t-microcross.pdf</a>
+<a href="http://bel.gsi.de/scripts/gnu-arm-assy-quick-ref.pdf">http://bel.gsi.de/scripts/gnu-arm-assy-quick-ref.pdf</a> 
+</p>
+
+<p>
+e os manuais do GNU estão (por exemplo) em:
+<a href="https://sourcery.mentor.com/sgpp/lite/arm/portal/release830">https://sourcery.mentor.com/sgpp/lite/arm/portal/release830</a>
+</p>
+</div>
+</li>
+
+<li><a id="sec-4-3-2-2" name="sec-4-3-2-2"></a>4.5.2<br><div class="outline-text-5" id="text-4-3-2-2">
+<p>
+Translate this C statement/assignment using the
+post-indexed form:
+</p>
+<pre class="example">array[10] = array[5] + y
+</pre>
+
+<p>
+Now try it using the pre-indexed form.
+</p>
+
+<p>
+Pergunta: qual o significado de se ter pre-indexado ou pos-indexado nesse caso?
+Resposta: o objetivo é apenas didático. Não tem significado. O uso do pre-indexado ou pos-indexado faz sentido dentro de um loop.
+</p>
+</div>
+</li>
+
+<li><a id="sec-4-3-2-3" name="sec-4-3-2-3"></a>4.5.4<br><div class="outline-text-5" id="text-4-3-2-3">
+<p>
+Declare os elementos na memoria usando .byte e use o label ao inves de posicoes fixas como 0x4000, 0x4001, etc.
+</p>
+
+<p>
+Suponha que ao inves de
+b) init<sub>Pointers</sub> (int *a,
+esteja escrito
+b) init<sub>Pointers</sub> (int *array,
+</p>
+</div>
+</li>
+
+<li><a id="sec-4-3-2-4" name="sec-4-3-2-4"></a>4.5.5, 4.5.6 sao muito parecidos.<br><div class="outline-text-5" id="text-4-3-2-4">
+<p>
+A diferenca eh que 4.5.6 nao pede para calcular a sequencia na memoria, podendo simplesmente usar registradores para isso. Nao existe de fato muita diferenca. Alguns alunos questionaram se 4.5.6 deveria calcula f(n) para qualquer n inteiro. O primeiro problema eh que o resultado deveria caber na memória do computador e portanto n sempre terah que ser limitado: nao eh isso que vamos fazer. Assuma n limitado para resultados cabendo em byte (4.5.5) ou word (4.5.6).
+</p>
+</div>
+</li></ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E4.</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-04&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-06-06&gt;</span></span> . E5: Conditional Executiong Loops (cap5).</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1">PLANEJAMENTO</h3>
+<div class="outline-text-3" id="text-5-1">
+</div><div id="outline-container-sec-5-1-1" class="outline-4">
+<h4 id="sec-5-1-1">A. Leia o Capitulo 5</h4>
+</div>
+<div id="outline-container-sec-5-1-2" class="outline-4">
+<h4 id="sec-5-1-2">B. Responda em uma folha de papel aa mao para entregar ao professor no comeco da aula - serve de base para a chamada oral individual.</h4>
+<div class="outline-text-4" id="text-5-1-2">
+</div><ul class="org-ul"><li><a id="sec-5-1-2-1" name="sec-5-1-2-1"></a>1. Traduza as seguintes instrucoes em uma unica instrucao ARM:<br><ul class="org-ul"><li><a id="sec-5-1-2-1-1" name="sec-5-1-2-1-1"></a>a. adicione resgistradores r3 e r6 somente se N = 0 (N estah "clear"). Armazene o resultado no registrador r7.<br></li>
+<li><a id="sec-5-1-2-1-2" name="sec-5-1-2-1-2"></a>b. adicione resgistradores r3 e r6 somente se N = 1. Armazene o resultado no registrador r7.<br></li>
+<li><a id="sec-5-1-2-1-3" name="sec-5-1-2-1-3"></a>c. Multiplique os registradores r7 e r12, colocando os resulados no registrador r3 somente se C estah setado (C = 1) e Z = 0 (apostila estah com erro, ver <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.den0024a/CHDEEABE.html">http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.den0024a/CHDEEABE.html</a>).<br></li>
+<li><a id="sec-5-1-2-1-4" name="sec-5-1-2-1-4"></a>d. Multiplique os registradores r7 e r12, colocando os resulados no registrador r3 somente se C clear ou Z set .<br></li>
+<li><a id="sec-5-1-2-1-5" name="sec-5-1-2-1-5"></a>e. Compare os registradores r6 e r8 somente se Z estah zerado.<br></li>
+<li><a id="sec-5-1-2-1-6" name="sec-5-1-2-1-6"></a>f. Compare os registradores r6 e r8 somente se Z set ou N �&nbsp; V<br><div class="outline-text-6" id="text-5-1-2-1-6">
+<ol class="org-ol">
+<li>Observe a seguinte funcao em C:
+</li>
+</ol>
+<pre class="example">int foo(int x, int y) {
+   if ((x + y) &gt;= 0)
+         return 0;
+   else
+         return 1;
+}
+</pre>
+
+<p>
+Suponha que ela tenha sido compilada e traduzida no seguinte codigo:
+</p>
+<pre class="example">foo        ADDS r0,r0,r1
+             BPL PosOrZ
+done      MOV r0, #0
+             MOV pc, lr
+PosOrZ  MOV r0,#1
+             B done
+</pre>
+
+<p>
+O compilador gerou o código corretamente? O compilador retorna 0 ou 1 em r0. Se não está bom o código, corrija.
+Altere o código para que ele execute a funcao em somente 4 instrucoes (dica: use execucao condicional).
+</p>
+</div>
+</li></ul>
+</li></ul>
+</div>
+
+<div id="outline-container-sec-5-1-3" class="outline-4">
+<h4 id="sec-5-1-3">C. IMPORTANTE: Fazer o rascunho de 5.5.4 em folha de papel rascunhado a mão; por exemplo, faça o diagrama de estados.</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<p>
+5.5.4
+Finite state machines: a nonresetting sequence recognizer
+</p>
+</div>
+<ul class="org-ul"><li><a id="sec-5-1-3-1" name="sec-5-1-3-1"></a>1. Consider an FSM with one input X and one output Z. The FSM asserts its output Z when it recognizes an input bit sequence of b1011. The machine keeps checking for the sequence and does not reset when it recognizes the sequence. Here is an example input string X and its output Z:<br><div class="outline-text-5" id="text-5-1-3-1">
+<pre class="example">X = ...0010110110...
+Z = ...0000010010...
+</pre>
+<p>
+Write ARM assembly to implement the sequence recognizer. Start with the initial
+input X in r1. Finish with the output Z in r2 at the end of the program.
+</p>
+</div>
+</li>
+<li><a id="sec-5-1-3-2" name="sec-5-1-3-2"></a>2. Now write the code to recognize any sequence Y up to 32 bits. Start with the recognizing sequence Y in r8 and the size of Y in r9. For example, to recognize the sequence Y = b0110110, then r8 = 0x36 and r9 = 0x7 before program execution. Everything else should be the same is in Step 1. Make sure that your program works for every case, including the case when r9 = 1 or r9 = 32.<br><div class="outline-text-5" id="text-5-1-3-2">
+<p>
+Uma idéia é fazer o item 2 e usá-lo para resolver o item 1.
+</p>
+</div>
+</li></ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2">Objetivo</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Fazer os exercicios do capitulo 5 da apostila em 5.5
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3">Observacoes</h3>
+<div class="outline-text-3" id="text-5-3">
+</div><div id="outline-container-sec-5-3-1" class="outline-4">
+<h4 id="sec-5-3-1">5.5.2</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<p>
+Se vc. considerar que nao eh necessario usar MOVNE, delete essa instrucao do codigo sugerido.  
+(mas talvez precise sim - um registrador nao pode ser origem e destino na multiplicacao). 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3-2" class="outline-4">
+<h4 id="sec-5-3-2">5.5.3</h4>
+<div class="outline-text-4" id="text-5-3-2">
+</div><ul class="org-ul"><li><a id="sec-5-3-2-1" name="sec-5-3-2-1"></a>Find maximum value<br><div class="outline-text-5" id="text-5-3-2-1">
+<p>
+In this exercise, you are to find the largest integer in a series of 32-bit unsigned integers.
+The length of the series is determined by the value in register r5. The maximum value
+is stored in the memory location 0x5000 at the end of the routine. The data values begin
+at memory location 0x5006. Choose 11 or more integers to use. Use as much conditional
+execution as possible when writing the code. Demonstrate the program to your lab
+instructor and print out the memory space starting at 0x5000 before and after the program
+runs. Be sure to include enough memory space to show all of your 32-bit integer values.
+</p>
+
+<p>
+0x5006 não é múltiplo de 4 - as words devem estar alinhadas em múltiplos de 4. Apenas declare as words (valor maximo e sequencia de words) em seu codigo e deixe que o gnuarm escolha suas posicoes.
+</p>
+</div>
+
+<ul class="org-ul"><li><a id="sec-5-3-2-1-1" name="sec-5-3-2-1-1"></a>Obs: A apostila foi escrita para o codewarrior e estamos usando o gnuarm e nesse ambiente é razoavelmente simples definir toda uma área de dados em uma certa posição de memória (no ldscript), mas não é simples definir que dados sejam alocados em um endereço específico - para isso podemos usar ponteiros para a posição fixa.<br><div class="outline-text-6" id="text-5-3-2-1-1">
+<p>
+Nesse laboratório, ao invés de usar 0x5000, defina uma área de dados de 100 bytes assim:
+</p>
+
+<pre class="example">dados: .space 100
+</pre>
+
+<p>
+e no programa podemos fazer, por exemplo:
+</p>
+<pre class="example">LDR r0,=dados+4
+</pre>
+
+<p>
+e dessa forma não dependemos da posição fixa 0x5000
+Caso queira dados jah pre-inicializados faca:
+</p>
+
+<pre class="example">dados: .word 0x1, 0x2 ...
+</pre>
+</div>
+</li></ul>
+</li></ul>
+</div>
+
+
+<div id="outline-container-sec-5-3-3" class="outline-4">
+<h4 id="sec-5-3-3">5.5.4</h4>
+<div class="outline-text-4" id="text-5-3-3">
+<p>
+se quiser, declare um numero binario como:
+0b10101 dentro do codigo.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-4" class="outline-3">
+<h3 id="sec-5-4">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E5.</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-11&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-06-13&gt;</span></span> . E6: Subroutines (cap6)</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1">PLANEJAMENTO</h3>
+<div class="outline-text-3" id="text-6-1">
+</div><div id="outline-container-sec-6-1-1" class="outline-4">
+<h4 id="sec-6-1-1">A. Ler cap 6.</h4>
+</div>
+<div id="outline-container-sec-6-1-2" class="outline-4">
+<h4 id="sec-6-1-2">B. Responda (rascunho no papel)</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<p>
+1 O que há de errado com as seguintes instruções:
+</p>
+<pre class="example">a) STMIA r5!, {r5, r4, r9}
+b) LDMDA r2, {}
+    STMDB r15!, [r0-r3, r4, lr}
+</pre>
+
+<p>
+2 Se o registrador r6 possui 0x8000 (como ponteiro para a memória); após executar
+</p>
+<pre class="example">LDMIA r6,{r7,r4,r0,lr}
+</pre>
+
+<p>
+o que fica em r0, r4, r7 e em lr?
+</p>
+
+<p>
+3 Assuma que a memória e registradores estejam:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="right">
+
+<col class="right">
+</colgroup>
+<tbody>
+<tr>
+<td class="right">0x8010</td>
+<td class="right">0x1</td>
+</tr>
+
+<tr>
+<td class="right">0x800C</td>
+<td class="right">0xfeeddeaf</td>
+</tr>
+
+<tr>
+<td class="right">0x8008</td>
+<td class="right">0x00008888</td>
+</tr>
+
+<tr>
+<td class="right">0x8004</td>
+<td class="right">0x12340000</td>
+</tr>
+
+<tr>
+<td class="right">0x8000</td>
+<td class="right">0xbabe0000</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+r0=0x13; r10xffffffff; r2 = 0xeeeeeeee; r3 0x8000
+</p>
+
+<p>
+Descreva a memória e conteúdos dos registradores após a instrução:
+</p>
+
+<pre class="example">LDMIA r3!, {r0,r1,r2}
+</pre>
+
+<p>
+4 Suponha que a pilha esteja como o diagrama abaixo. Que instrução seria necessária para sair do estado original e ir para o estado a), depois b) e depois c)?
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="right">
+
+<col class="right">
+
+<col class="right">
+
+<col class="right">
+
+<col class="right">
+</colgroup>
+<tbody>
+<tr>
+<td class="right">Endereço</td>
+<td class="right">Original</td>
+<td class="right">A</td>
+<td class="right">B</td>
+<td class="right">C</td>
+</tr>
+
+<tr>
+<td class="right">0x8010</td>
+<td class="right">0x1</td>
+<td class="right">0x1</td>
+<td class="right">0x1</td>
+<td class="right">0x1</td>
+</tr>
+
+<tr>
+<td class="right">0x800C</td>
+<td class="right">0xfeeddeaf</td>
+<td class="right">0xfeeddeaf</td>
+<td class="right">0xfeeddeaf</td>
+<td class="right">0xfeeddeaf</td>
+</tr>
+
+<tr>
+<td class="right">0x8008</td>
+<td class="right">&nbsp;</td>
+<td class="right">0xbabe2222</td>
+<td class="right">0xbabe22222</td>
+<td class="right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="right">0x8004</td>
+<td class="right">&nbsp;</td>
+<td class="right">&nbsp;</td>
+<td class="right">0x12340000</td>
+<td class="right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="right">0x8000</td>
+<td class="right">&nbsp;</td>
+<td class="right">&nbsp;</td>
+<td class="right">&nbsp;</td>
+<td class="right">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-sec-6-1-3" class="outline-4">
+<h4 id="sec-6-1-3">C. IMPORTANTE</h4>
+<div class="outline-text-4" id="text-6-1-3">
+<p>
+Voce pode escolher entre:
+</p>
+<ul class="org-ul">
+<li>apresentar o codigo rodando no seu PRÓPRIO computador no comeco de aula
+</li>
+<li>ou rascunho no papel.
+</li>
+</ul>
+<p>
+6.5.2 Bubble sorting
+6.5.3 Magic Squares
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2">OBJETIVO</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+Exercicios 6.5 do 6.5.1 ateh 6.5.4; o resto serah feito na proxima aula.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-3" class="outline-3">
+<h3 id="sec-6-3">Observacoes</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+6.5.1
+transmit the arguments by way of the stack with two subroutines, func1 and
+func2, that demonstrate stack functionality.
+É importante que o endereco de retorno seja colocado na pilha em func1.
+Declare os elementos na memoria usando .word (veja acima) e use o label ao inves de posicoes fixas como 0x4000, 0x4001, etc.
+</p>
+
+<p>
+6.5.2
+Bubble Sort
+6.5.2.1. Usem load e store multiplo envolvendo 2 posicoes consecutivas de memoria quando fizerem a "bolha" andar. Embora no exercicio da apostila esteja como byte, usar word porque LDM� usa word.
+</p>
+
+
+<p>
+6.5.2.2. Modify your code to utilize a full descending stack. Sorting must be done on the
+  stack only. Once the stack is sorted, store the sorted stack back to the original
+ array of memory locations starting at 0x4001.
+</p>
+
+<p>
+The algorithm for the bubble sort is as follows:
+a. Compare adjacent elements. If the first element is greater than the second,
+swap them.
+</p>
+
+<p>
+b. Do this for each pair of adjacent elements, starting with the first two and
+     ending with the last two. At this point the last element should be the
+    greatest.
+c. Repeat the steps for all elements except the last one.
+d. Repeat this process for one fewer element each time, until you have no
+more pairs to compare.
+</p>
+
+<p>
+Dado que eh muito confuso, nao estarei cobrando esse uso de pilha. 
+Podem pular esse item 6.5.2.-2.
+Entretanto, seguem observacoes colhidas ao longo do curso. Porem, pulem esse item:
+</p>
+
+<p>
+Está confuso como utilizar o full descending stack - uma forma de organizar usando pilha somente é torre de Hannoy mas usando o bubble sort estamos mexendo em elmentos de uma array. Uma idéia é: trabalha com duas estruturas - uma array onde se descobre o maior e a pilha que vai armazenando o maior elemento em cada iteracao. Observar que a array eh de bytes enquanto que a pilha eh de words (o mais simples eh desperdicar memoria ao usar os bytes como words).
+Outra idéia (grupo Joao) - usar duas pilhas. A pilha eh varrida a cada comparacao jogando o maior valor para a segunda pilha. Na primeira pilha sobre o menor valor. A segunda pilha com N-1 elementos é totalmente trasportada para a primeira pilha. O processo se repete para os N-1 elementos da primeira pilha.
+</p>
+
+
+<p>
+6.5.3
+Quadrado Magico
+Nao é necessário preocupar-se em colocar o quadrado mágico em 0x4000. É mais fácil declarar na memória ao final do programa algo como .word 1,4, � colocando as words do quadrado mágico.
+</p>
+
+<p>
+6.5.4
+More stacks
+Write ARM assembly to implement a push operation without the use of load/store
+multiple instructions. Write the code to handle bytes, half-words, and words. Use r0 to
+indicate the data type. A value of 1 in r0 indicates that a byte is to be pushed, 2 indicates
+a half-word, and 4 indicates a word. Put the data to push in r1.
+</p>
+
+<p>
+Lembrar que sp eh sempre um multiplo de 4. Tem que tomar um certo cuidado ao empilhar byte ou half word para que o sp permaneca multiplo de 4; ou seja, dependendo do caso a memoria eh desperdicada. 
+</p>
+
+<p>
+O mais facil eh sempre alocar 4 bytes mesmo que seja para um byte apenas, desperdicando memoria. Se quiser fazer dessa forma bem facil, faca.
+</p>
+
+<p>
+O mais dificil eh ir alocando memoria dependendo do tipo de dado, economizando memoria. Para byte, empilha no topo da pilha sempre; para half word, empilha no endereco multiplo de 2 mais proximo do topo; para word, empilha no endereco multiplo de 4 mais proximo do topo da pilha. Nao eh necessario ir para essa solucao mais dificil pois ainda teriamos o problema de como desempilhar sem dar problemas.
+</p>
+
+<p>
+Dica para olhar a pilha no gdb:
+</p>
+<pre class="example">x/20 $sp
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-6-4" class="outline-3">
+<h3 id="sec-6-4">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E6.</h3>
+</div>
+
+<div id="outline-container-sec-6-5" class="outline-3">
+<h3 id="sec-6-5"><span class="timestamp-wrapper"><span class="timestamp">&lt;2018-06-21&gt;</span></span> feriado (Corpus Christi)</h3>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-18&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-07-04&gt;</span></span> . P1 - Subroutines (cap6)</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1">PLANEJAMENTO</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+para a prova preparem um pendrive contendo tudo o que acharem necessario para desenvolverem programas para o ARM, desde programas de experiencias passadas, livro sobre o instruction set da ARM, manuais do gdb, etc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2">Prova</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+A prova ocorrerá na sala de laboratorio de sistemas digitais. Venham com seus laptops preparados (toolchain ou simulador instalado, codigos fonte para consulta, manuais, etc.).
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3">Amostra de uma prova</h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+dado um numero, identificar se ele é primo.
+</p>
+</div>
+
+<div id="outline-container-sec-7-3-1" class="outline-4">
+<h4 id="sec-7-3-1">tempo de prova</h4>
+<div class="outline-text-4" id="text-7-3-1">
+<p>
+2 horas.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-25&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-06-27&gt;</span></span> . E7: Memory Mapped Peripherals (cap7).</h2>
+<div class="outline-text-2" id="text-8">
+</div><div id="outline-container-sec-8-1" class="outline-3">
+<h3 id="sec-8-1">PLANEJAMENTO:</h3>
+<div class="outline-text-3" id="text-8-1">
+</div><div id="outline-container-sec-8-1-1" class="outline-4">
+<h4 id="sec-8-1-1">A. Leitura, alem do capt 7 da aposlita, consulte as seguintes referencias para fazer o planejamento:</h4>
+<div class="outline-text-4" id="text-8-1-1">
+</div><ul class="org-ul"><li><a id="sec-8-1-1-1" name="sec-8-1-1-1"></a><a href="http://www.pcs.usp.br/~jkinoshi/2014/UM_KS32C50100_REV1.PDF">http://www.pcs.usp.br/~jkinoshi/2014/UM_KS32C50100_REV1.PDF</a><br><div class="outline-text-5" id="text-8-1-1-1">
+<p>
+UM<sub>KS32C50100</sub><sub>REV1</sub>.PDF - Manual do KS32C50100 RISC MICROCONTROLLER que está na placa do evaluator7t
+</p>
+</div>
+</li>
+
+<li><a id="sec-8-1-1-2" name="sec-8-1-1-2"></a><a href="http://www.pcs.usp.br/~jkinoshi/2014/dui0134_evaluator7t.pdf">http://www.pcs.usp.br/~jkinoshi/2014/dui0134_evaluator7t.pdf</a><br><div class="outline-text-5" id="text-8-1-1-2">
+<p>
+dui0134<sub>evaluator7t</sub>.pdf - Manual da placa do evaluator 7t
+</p>
+</div>
+</li></ul>
+</div>
+
+<div id="outline-container-sec-8-1-2" class="outline-4">
+<h4 id="sec-8-1-2">B. Rascunho de codigo</h4>
+<div class="outline-text-4" id="text-8-1-2">
+<p>
+como planejamento rascunhem a solucao de cada um dos exercicios abaixo trazendo isso em PAPEL (retirarei pontos caso nao seja em papel rascunhado - nao deve ser impresso).
+</p>
+
+<p>
+Os exercicios abaixo devem ser feitos com um cuidado extra mostrando como o codigo assembly faz de fato a entrada e saida, passo a passo. Nao existe informacao suficiente na apostila e por isso estou passando em anexo o manual da placa dui�pdf. Vejam o capitulo 3 - Programmer's reference do arquivo dui�pdf que contem codigo em C para o acessos dos leds, display de 7 segmentos e dip switches. Para o planejamento serah importante observar esse codigo e transpor para o assembly do ARM. O documento UM<sub>KS</sub> � eh o data sheet do ARM produzido pela Samsung.
+Os enderecos dos registradores estao no item 7.4.1 do ARM Lab Manual.
+</p>
+
+<p>
+Se tiverem duvidas, perguntem.
+</p>
+
+<p>
+Dica: Voce farah algo da seguinte forma para lidar com registradores. Como eles estao mapeados em memoria, acessamos os registradores como se estivessemos acessando a memoria normal.
+</p>
+
+<pre class="example">- Escrevendo 0xf0 no IOPMOD:
+ldr	r0, =0x3ff5000 	@ IOPMOD
+ldr	r2, =0xf0	@ seta 1 nos bits [7:4]
+str	r2, [r0]	@ seta IOPMOD como output
+</pre>
+
+<p>
+7.5.1 - Escrita nos LEDS
+Displaying the hex digits in binary to the surface-mounted LEDs
+Write ARM assembly to flash the hex digits in binary form to the surface-mounted
+LEDs in ascending order. Now slightly modify the code to flash the digits in descending
+order. Make sure to use a delay so that the digits can be seen. The digits should not stop
+flashing.
+</p>
+
+<p>
+Para o delay crie um loop onde o registrador R0 eh inicializado com 0xfffff e eh decrementado ateh zero.
+</p>
+
+<p>
+7.5.3 - Escrita no display de 7 segmentos
+Displaying the contents of a memory location to the seven-segment display
+Write ARM assembly to inspect memory location 0x4000. If the location contains a
+decimal number in the range 0-15, display the contents in hex on the seven-segment
+LED display. As an example, if 0x4000 contains 14, display an E.
+</p>
+
+
+<p>
+7.5.5 - Leitura dos dip switches
+Displaying the value of the DIP switches to the surface-mounted LEDs
+Write ARM assembly to inspect DIP1 to DIP4, which act like four binary digits.
+Display the contents in binary on the surface-mounted LEDs. See Figure 2-10 of
+Evaluator-7T User Guide for bit assignments
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-8-2" class="outline-3">
+<h3 id="sec-8-2">OBJETIVO</h3>
+<div class="outline-text-3" id="text-8-2">
+<p>
+Faremos os exercicios 7.5.1 a 7.5.11 envolvendo entrada/saida. 
+Apresentam ao professor o exercicio 7.5.11 funcionando. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-8-3" class="outline-3">
+<h3 id="sec-8-3">Observacoes</h3>
+<div class="outline-text-3" id="text-8-3">
+</div><ul class="org-ul"><li><a id="sec-8-3-0-1" name="sec-8-3-0-1"></a>Conexão com a placa evaluator 7t<br><ul class="org-ul"><li><a id="sec-8-3-0-1-1" name="sec-8-3-0-1-1"></a>ttyUSB0 -&gt; ttyS0<br><div class="outline-text-6" id="text-8-3-0-1-1">
+<p>
+No ubuntu 16.4 do laboratorio crie ttyS0 com a placa ligada.
+Para realizarmos a conexão com a placa, observe que no laboratório os computadores não possuem interface serial e sim uma interface USB/serial. O linux enxerga essa interface como o dispositivo
+/dev/ttyUSB0
+Porém, o gnuarm 4.3 não enxerga /dev/ttyUSB0 e sim /dev/ttyS0. 
+Criamos o script tty.sh para ligar /dev/ttyUSB0 a /dev/ttyS0; para isso primeiro ligue a placa e certifque-se de que o cabo serial está conectado. Em seguida, rode
+$ tty.sh
+aparecerá umas mensagens de erro:
+</p>
+
+<p>
+-&gt; nao foi possivel resolver �
+</p>
+
+<p>
+, mas a ligacao estah correta.
+Se por acaso voces retirarem o cabo e o reconectarem, devem ter problema pois ttyUSB0 fica inativo e teremos ttyUSB1 no linux.
+</p>
+</div>
+
+<ul class="org-ul"><li><a id="sec-8-3-0-1-1-1" name="sec-8-3-0-1-1-1"></a>tty.sh<br><div class="outline-text-7" id="text-8-3-0-1-1-1">
+<p>
+O script tty.sh faz o seguinte:
+</p>
+
+<pre class="example">sudo su
+cd /dev
+sudo rm ttyS0
+sudo ln -s ttyUSB0 ttyS0
+</pre>
+
+<p>
+Altere as permissoes de ttyUSB0 para que todos possa acessar:
+_EXAMPLE
+sudo chmod 666 ttyUSB0
+#+END<sub>EXAMPLE</sub>
+</p>
+
+<p>
+Ao usar o arm-elf-gdb, faremos a conexao com a placa da seguinte forma:
+</p>
+<pre class="example">This GDB was configured as "--host=i686-pc-linux-gnu --target=arm-elf"...
+(gdb) set remotebaud 57600    --&gt; o default eh 9600 bps; se quiser, altere para  19200 38400 57600 ou 115200 caso deseje uma comuniacao mais veloz.
+(gdb) target rdi /dev/ttyS0
+Angel Debug Monitor V1.31 (ARM, INC. Evaluator Release v1.01)
+Built for ARM7TDMI Serial, IRQ
+Built Sep 26 2000
+Serial Rate:   9600
+RDI_info: internal error, unimplemented message
+Connected to ARM RDI target.
+</pre>
+<p>
+Após conectar, nao esqueca do comando load. Use agora o arm-elf-gdb como em experiencias anteriores.
+</p>
+</div>
+</li></ul>
+</li></ul>
+</li>
+
+<li><a id="sec-8-3-0-2" name="sec-8-3-0-2"></a>docker<br><div class="outline-text-5" id="text-8-3-0-2">
+<p>
+Rode o docker da seguinte forma:
+</p>
+<pre class="example">docker run --device=/dev/ttyS0 --rm -ti -v "$PWD/src":/home/student/src epiceric/gcc-arm
+</pre>
+</div>
+</li>
+
+<li><a id="sec-8-3-0-3" name="sec-8-3-0-3"></a>diretorios com espacos<br><div class="outline-text-5" id="text-8-3-0-3">
+<p>
+Nao rode o arm-elf-gdb com diretorios com espacos em ~/src
+</p>
+</div>
+</li>
+
+
+<li><a id="sec-8-3-0-4" name="sec-8-3-0-4"></a>Continue x run<br><div class="outline-text-5" id="text-8-3-0-4">
+<p>
+Apos o load, pode-se colocar breakpoints. Para rodar o codigo no kit, use c/continue e  nao r/run.
+</p>
+</div>
+</li>
+
+<li><a id="sec-8-3-0-5" name="sec-8-3-0-5"></a>Shoud reset the target<br><div class="outline-text-5" id="text-8-3-0-5">
+<p>
+Se após o comando
+target rdi /dev/ttyS0
+a placa pedir para resetar o target, isso significa apertar o botao de reset 'sys' da placa evaluator7t.
+</p>
+</div>
+</li>
+
+
+<li><a id="sec-8-3-0-6" name="sec-8-3-0-6"></a>Problema ao usar o run - o gdb pergunta se quer reiniciar o programa.<br><div class="outline-text-5" id="text-8-3-0-6">
+<p>
+Use continue ou c ao inves de run, para continuar a execucao.
+Ao invés de: 
+</p>
+<pre class="example">b main
+run
+</pre>
+<p>
+faça
+</p>
+<pre class="example">b main
+c
+</pre>
+<p>
+onde c = continue.
+</p>
+</div>
+</li>
+
+<li><a id="sec-8-3-0-7" name="sec-8-3-0-7"></a>vc. jah conectou uma vez, mas nao consegue se conectar uma segunda vez.<br><div class="outline-text-5" id="text-8-3-0-7">
+<p>
+Voce pode resolver isso de duas formas.
+mate o docker
+faca
+</p>
+<pre class="example">docker ps # obtenha a imagem do docker rodando
+docker kill NIMAGEM # em NIGMAGEM passe o numero da imagem visto em docker ps.
+</pre>
+</div>
+</li>
+
+<li><a id="sec-8-3-0-8" name="sec-8-3-0-8"></a>Problema no STR<br><div class="outline-text-5" id="text-8-3-0-8">
+<p>
+As portas de entrada e saida possuem tamanhos fixos: byte, word. Nao eh possivel fazer um STR (word) em uma posicao onde a porta eh um byte. Para isso use STRB.
+</p>
+</div>
+</li>
+
+<li><a id="sec-8-3-0-9" name="sec-8-3-0-9"></a>Problema no LDR ou ADR em posicoes como 0x3000, 0x4000<br><div class="outline-text-5" id="text-8-3-0-9">
+<p>
+Nao use posicoes fixas como 0x3000 pois a placa evaluator7t deve ter essa posicao em EPROM ou alocada para o programa monitor. Declare um vetor ao final do seu codigo, como em  <a href="http://www.coranac.com/tonc/text/asm.htm">http://www.coranac.com/tonc/text/asm.htm</a>:
+</p>
+
+<pre class="example">    mov     r2, #1
+@ Byte loads
+    adr     r0, bytes
+    ldrb    r3, bytes       @ r3= bytes[0];     // r3= 0x000000FF= 255
+    ldrsb   r3, bytes       @ r3= (s8)bytes[0]; // r3= 0xFFFFFFFF= -1
+    ldrb    r3, [r0], r2    @ r3= *r0_b++;      // r3= 255, r0++;
+@ Halfword loads
+    adr     r0, hwords
+    ldrh    r3, hwords+2    @ r3= words[1];     // r3= 0x0000FFFF= 65535
+    ldrsh   r3, [r0, #2]    @ r3= (s16)r0_h[1]; // r3= 0xFFFFFFFF= -1
+    ldrh    r3, [r0, r2, lsl #1]    @ r3= r0_h[1]? No! Illegal instruction :(
+
+@ Byte array: u8 bytes[3]= { 0xFF, 1, 2 };
+bytes:
+    .byte   0xFF, 1, 2
+@ Halfword array u16 hwords[3]= { 0xF001, 0xFFFF, 0xF112 };
+    .align  1    @ align to even bytes REQUIRED!!!
+hwords:
+    .hword  0xF110, 0xFFFF, 0xF112
+</pre>
+</div>
+</li>
+
+<li><a id="sec-8-3-0-10" name="sec-8-3-0-10"></a>7.5.3, 7.5.4<br><div class="outline-text-5" id="text-8-3-0-10">
+<p>
+Em 7.5.3 estah escrito para usar a posicao 0x4000 de memoria. Ao inves disso, declare o que for preciso de dados no codigo em assembly como na observacao imediatamente acima.
+Nao use a posicao 0x3000 - o evaluator7t deve estar usando tambem essa posicao - por exemplo, ao se comunicar com o arm-elf-gdb. Os valores escritos na memoria em 0x3000 serao alterados pela placa e nao pelo seu programa. Veja observacao acima.
+</p>
+
+<p>
+A documentacao da placa estah errada para o display de 7 segmentos.
+Deveria ser algo como:
+</p>
+<pre class="example">   a_
+g |_ |b
+e |_ |c
+   d
+</pre>
+</div>
+</li>
+
+<li><a id="sec-8-3-0-11" name="sec-8-3-0-11"></a>7.5.6<br><div class="outline-text-5" id="text-8-3-0-11">
+<p>
+The program must be stopped manually.
+Nao eh necessario que se pare o programa manualmente.
+</p>
+</div>
+</li></ul>
+</div>
+
+
+<div id="outline-container-sec-8-4" class="outline-3">
+<h3 id="sec-8-4">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E7.</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-02&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-07-11&gt;</span></span> . E8: C compiler + assembler - juntar C com assembly.</h2>
+<div class="outline-text-2" id="text-9">
+</div><div id="outline-container-sec-9-1" class="outline-3">
+<h3 id="sec-9-1">PLANEJAMENTO:</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+Crie um programa em C (imprime.c) que faz uma contagem de 5 a 0 usando uma funcao recursiva do tipo:
+</p>
+
+<pre class="example">main() {
+     imprime(5);
+}
+
+imprime(N) {
+  if (N&lt;0) {
+      exit();
+  }
+  printf("numero = %d\n", N);
+  imprime(N-1);
+}
+</pre>
+
+<p>
+Crie de fato o programa em C e compile em casa antes da aula. Faca o compilador gerar o código assembly imprime.s através de
+</p>
+<pre class="example">arm-elf-gcc –S imprime.c
+</pre>
+
+<p>
+Estude o código e simule a pilha em uma folha de papel escrita a mão:
+</p>
+<ul class="org-ul">
+<li>Como a funcao imprime estah usando a pilha para fazer a chamada recursiva?
+</li>
+</ul>
+
+<p>
+Apresente ao professor também o código imprime.c e imprime.s no comeco da aula na tela do computador (ou seja, pode ser de forma eletronica). Apresente a explicacao de como a pilha estah sendo usada (simule desenhando a pilha usando o fp, ip, sp) para fazer a chamada recursiva numa folha de papel escrita aa mao.
+</p>
+
+<p>
+Referencias que podem ajudar:
+</p>
+
+<p>
+<a href="http://www.cl.cam.ac.uk/~fms27/teaching/2001-02/arm-project/02-sort/apcs.txt">http://www.cl.cam.ac.uk/~fms27/teaching/2001-02/arm-project/02-sort/apcs.txt</a>
+</p>
+
+<p>
+<a href="http://msdn.microsoft.com/en-us/library/ms253599(v=vs.80).aspx">http://msdn.microsoft.com/en-us/library/ms253599(v=vs.80).aspx</a>
+</p>
+
+<p>
+<a href="http://stackoverflow.com/questions/15752188/arm-link-register-and-frame-pointer">http://stackoverflow.com/questions/15752188/arm-link-register-and-frame-pointer</a>
+</p>
+
+
+<p>
+Responda:
+</p>
+<ul class="org-ul">
+<li>como o valor N eh passado como parametro para imprime() em main? via registrador ou pilha?
+</li>
+<li>para que serve o frame pointer?
+</li>
+<li>como o valor N eh referenciado dentro de imprime.s (vindo do compilador)?
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-9-2" class="outline-3">
+<h3 id="sec-9-2">Objetivos da aula de hoje:</h3>
+<div class="outline-text-3" id="text-9-2">
+<ol class="org-ol">
+<li>compilar codigo assembly e codigo C e linkar ambos.
+</li>
+<li>alterar o codigo C inserindo assembly no meio do código C.
+</li>
+<li>observar como funciona a recursao e gerar um relatorio usando o libreoffice com os printscreens da tela do arm-elf-gdb.
+</li>
+</ol>
+
+<p>
+RELATORIO:
+Excepcionalmente para a aula de hoje, ao inves de enviarem um texto por email, crie um documento usando o libreoffice ou o openoffice anexando os printscreens com uma explicacao do que ocorre ao seguirem os itens abaixo.
+Como diversas instrucoes alteram a pilha, vc. pode observar a pilha fazendo:
+x/16 $sp
+</p>
+
+<p>
+Pedi para uma equipe em 2011 gerar uma apostila sobre isso: <a href="http://www.pcs.usp.br/~jkinoshi/2012/usandoC-ProjetoLabProc.pdf">http://www.pcs.usp.br/~jkinoshi/2012/usandoC-ProjetoLabProc.pdf</a>
+</p>
+
+<p>
+Nessa apostila existe o código de sement.c e segment.h, mas voce pode acha-los em
+</p>
+
+<p>
+<a href="http://www.pcs.usp.br/~jkinoshi/2014/segment.c">http://www.pcs.usp.br/~jkinoshi/2014/segment.c</a>
+</p>
+
+<p>
+<a href="http://www.pcs.usp.br/~jkinoshi/2014/segment.h">http://www.pcs.usp.br/~jkinoshi/2014/segment.h</a>
+</p>
+
+<p>
+Vamos seguir a experiencia observando os itens abaixo que fazem referencia aa apostila. A medida que seguirem os itens abaixo, preencham o relatorio para ser enviado no final da aula.
+</p>
+</div>
+
+<div id="outline-container-sec-9-2-1" class="outline-4">
+<h4 id="sec-9-2-1">compilar codigo assembly e codigo C e linkar ambos.</h4>
+<div class="outline-text-4" id="text-9-2-1">
+<ul class="org-ul">
+<li>O professor passou segment.c, segment.h. Gere o arquivo segment.o e execute no kit. Veja que aparece um numero no display. Note que segment.c imprime o numero no main. Ver PASSO-1 da apostila. 
+</li>
+</ul>
+<p>
+A apostila foi feita para se rodar a experiencia na placa evaluator-7t 
+</p>
+<pre class="example">arm-elf-gcc segment.c –o segment.o
+</pre>
+
+<p>
+porém, para debugar voce precisa adicionar a opcao -g
+</p>
+<pre class="example">arm-elf-gcc -g segment.c –o segment.o
+</pre>
+
+<ul class="org-ul">
+<li>crie a funcao imprime em segment.c que recebe um numero e coloca esse numero no display. Para isso basta retirar do main a parte pertinente. Compile e teste. Ver PASSO-2 da apostila.
+</li>
+
+<li>crie o arquivo imprime.c com a funcao imprime gerada no item anterior. O codigo executavel eh gerado atraves de: arm-elf-gcc -g imprime.c segment.c -o segment.o; teste o codigo gerado. Ver PASSO-3 da apostila.
+</li>
+
+<li>compile imprime.c gerando seu objeto: arm-elf-gcc -S impime.c (gerando imprime.s). Refaca o codigo usando imprime.s + segment.c. Teste. Ver PASSO-4 da apostila.
+</li>
+</ul>
+<p>
+No passo 4, existem duas formas de gerar o arquivo .elf para ser executado na placa:
+</p>
+
+<p>
+a) O gcc faz tudo (monta e linka): arm-elf-gcc –g imprime.s segment.c –o segment.o
+</p>
+
+<p>
+b) O gcc soh compila:
+</p>
+
+<p>
+Para o segment.c e para o imprime.c fazer:
+</p>
+<pre class="example">arm-elf-gcc -S segment.c
+arm-elf-as -o segment.o segment.s
+</pre>
+
+<p>
+E depois linkar o segment.o e imprime.o usando arm-elf-ld.
+Porém utilize a forma a) para evitar problemas com linkar com a biblioteca do ambiente (para uma funcao usada para chamar o main e para o printf).
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-9-2-2" class="outline-4">
+<h4 id="sec-9-2-2">alterar o codigo C inserindo assembly no meio do código C.</h4>
+<div class="outline-text-4" id="text-9-2-2">
+</div><ul class="org-ul"><li><a id="sec-9-2-2-1" name="sec-9-2-2-1"></a>Estude o codigo imprime.s.<br><div class="outline-text-5" id="text-9-2-2-1">
+<p>
+Como o numero eh passado como parametro? Como o fp é usado para isso? Isso corresponde ao PASSO-5 da apostila, mas não é necessário fazer esse passo.
+</p>
+
+<p>
+Em uma funcao, os registradores poderiam ser salvos e recuperados chamados assim:
+</p>
+<pre class="example">BL myfunction
+myfunction
+           .....
+           STMFD sp!, {r4-r10, lr}; guarda os registradores
+           .....
+           .....
+           LDMFD sp!, {r4-r10, pc}; recupera os registradores; o retorno da funcao eh feito colocando lr em pc.
+</pre>
+
+
+<p>
+Para entender melhor como funciona a chamada de rotinas, veja:
+<a href="http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042d/IHI0042D_aapcs.pdf">http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042d/IHI0042D_aapcs.pdf</a>
+Responda:
+Quais sao os registradores atribuidos a: fp, ip, sp, lr?
+</p>
+
+<p>
+Para que serve o fp?
+Responda.
+</p>
+
+<p>
+Para que serve o ip?
+Resposta: Register r12 (IP) may be used by a linker as a scratch register between a routine and any subroutine it calls (for details, see §5.3.1.1, Use of IP by the linker). It can also be used within a routine to hold intermediate values
+between subroutine calls.
+Essa resposta eh extremamente confusa, mas eh o que estah escrito em aapcs.pdf. Em: <a href="https://stackoverflow.com/questions/16120123/arm-why-do-i-need-to-push-pop-two-registers-at-function-calls">https://stackoverflow.com/questions/16120123/arm-why-do-i-need-to-push-pop-two-registers-at-function-calls</a> temos que a ARM quer o alinhamento de 8 bytes na memoria (para o ARM 64 bits) Isso explica o motivo de se ter um registrador scratch (r12, ip) colocado na pilha - porque do ponto de vista da recursao em si, nao faz sentido�
+</p>
+</div>
+</li>
+
+<li><a id="sec-9-2-2-2" name="sec-9-2-2-2"></a>Agora que voce conhece imprime.s e imprime.c; altere imprime.c para se colocar codigo assembly dentro do codigo C usando o inline.<br><div class="outline-text-5" id="text-9-2-2-2">
+<p>
+Ver PASSO-6 da apostila.
+Basicamente voce deve imprimir um numero em imprime.c usando a funcao printf. Depois, observe o imprime.s (gerado pelo compilador de imprime.c) e tire o miolo da funcao imprime em assembly e enxerte no codigo em C. 
+</p>
+
+<p>
+Observacao: O compilador gera lables com pontos na frente (ex: .L4). Apenas o compilador deve fazer isso. O código a ser inserido inline não deve ter labels comecando por ponto (ex: L4). Isso evita que o compilador e o usuário criem e usem labels iguais.
+</p>
+
+<p>
+Quando em C, declaramos:
+</p>
+
+<pre class="example">printf("%d", numero);
+</pre>
+<p>
+O ponteiro para a string "%d" eh passado como parametro para a funcao printf em r0 e numero eh passado em r1. Esse ponteiro eh passado pelo endereco da label .L(numero) e portanto voce nao tem acesso a ele.
+A fim de ver o ponteiro para string ao misturar C com o assembly declare como variavel global (para facilitar o seu entendimento do codigo gerado):
+</p>
+
+<pre class="example">char *str = "%d";
+</pre>
+<p>
+e passe o ponteiro para "%d" em r0. Tome cuidado ao fazer isso.
+</p>
+
+<p>
+Se ainda tiver duvidas, veja o assembly de:
+</p>
+<pre class="example">printf(str, numero);
+</pre>
+
+<p>
+Se voce quiser observar o codigo gerado pelo C rodando como assembly, gere o assembly imprime.s (vindo do imprime.c usando a opcao -S do arm-elf-gcc) e depois faca:
+</p>
+<pre class="example">arm-elf-gcc –g imprime.s segment.c –o segment.o
+</pre>
+<p>
+e debugue segment.o dentro do arm-elf-gdb.
+</p>
+</div>
+</li></ul>
+</div>
+
+
+
+<div id="outline-container-sec-9-2-3" class="outline-4">
+<h4 id="sec-9-2-3">observar como funciona a recursao.</h4>
+<div class="outline-text-4" id="text-9-2-3">
+</div><ul class="org-ul"><li><a id="sec-9-2-3-1" name="sec-9-2-3-1"></a>Observe como o imprime do pre-lab imprime um caracter no codigo assembly (gerado ao compilar .c com -S).<br><div class="outline-text-5" id="text-9-2-3-1">
+<p>
+Utilizando o gdb observe como o fp, ip e sp são utilizados em:
+</p>
+<pre class="example">stmfd sp!, {fp, ip, lr, pc}
+</pre>
+
+<p>
+e como sao desempilhados em:
+</p>
+<pre class="example">ldmfd sp, {r3, fp, sp, pc}
+</pre>
+
+
+<p>
+O arm-elf-gcc estah primeiro passando os parametros por registradores e depois empilhando-os dentro da rotina, por isso os parametros sao acessado via [fp - Numero] pois foram empilhados depois da entrada da rotina que empilhou ip, sp, fp. Supondo que uma funcao tenha 5 parametros, a funcao terah que obrigatoriamente empilhar alguns antes da chamada da rotina e esses parametros vao ser acessados via [fp + Numero]. Verifique colocando 5 parametros na funcao recursiva. Observe como eles sao empilhados e acessados.
+</p>
+
+
+<p>
+Observe que entre o stmfd e o ldmfd, o sp é alterado; por isso lr eh repassado para o pc.
+</p>
+
+<p>
+O grupo do Lucas,Ricardo,Gabriel,Jonatas enviaram uma foto de como a pilha se comporta quando nas chamadas recursiva em:
+<img src="./labmicro-19_files/pilha.PNG" alt="pilha.PNG">
+</p>
+
+
+<p>
+Perguntas:
+Como o parametro é passado para imprime? Na resposta explique o caso da rotina ter 5 parametros (via registrador e pilha) e da rotina ter poucos parametros (via registrador).
+</p>
+
+<p>
+Como esse parametro é empilhado (isso é necessário em caso de chamadas recursivas)? Como é aberto um espaco na pilha para o parametro de imprime? Onde isso é feito no código?
+</p>
+
+<p>
+Por que se faz fp-16 para acessar o parametro?  
+</p>
+
+<p>
+Como esse parametro é desempilhado? Observe que o ip eh repassado para sp e com isso, a alteracao na pilha para abrir o espaco para o parametro de "imprime" é automaticamente refeito. 
+</p>
+</div>
+
+<ul class="org-ul"><li><a id="sec-9-2-3-1-1" name="sec-9-2-3-1-1"></a>Declare a variavel local "int lixo"  na funcao imprime.<br><div class="outline-text-6" id="text-9-2-3-1-1">
+<p>
+Dentro da funcao recursiva faca, lixo++. Observe o codigo assembly gerado pelo compilador. Responda no relatorio: Como lixo foi referenciado? Como foi aberto espaco na pilha para o lixo? Retire printscreens comparando a pilha sem o uso do int lixo e com o uso de int lixo. Variaveis locais devem ser empilhadas pois caso, a funcao seja recursiva elas fazem parte da recursao.
+</p>
+</div>
+</li></ul>
+</li>
+
+<li><a id="sec-9-2-3-2" name="sec-9-2-3-2"></a>Crie imprime.s para que imprima 7 numeros de 1 a 7<br><div class="outline-text-5" id="text-9-2-3-2">
+<p>
+Gere o codigo imprime.s. 
+Estude como o fp (frame pointer) eh usado para marcar uma posicao na pilha empilhando parametros e variaveis locais. Apresente no relatorio como a pilha e o fp estao sendo usados. Corresponde ao PASSO-7 da apostila.
+</p>
+
+<p>
+Rode essa versao de imprime no gdb. 
+Retire printscreen antes e depois de cada instrucao que faz alteracao na pilha, em particular:
+</p>
+<pre class="example">stmfd sp!, {fp, ip, lr, pc}
+ldmfd sp, {r3, fp, sp, pc}
+</pre>
+
+<p>
+Pergunta:
+Quando imprime chama recursivamente imprime é necessário que o haja um ponteiro para o fp anterior. Como isso é feito?
+Quando imprime retorna para uma instancia anterior é necessário ue o fp retorne para servir de base para os parametros e variaveis locais anteriores. Explique como isso é feito.
+</p>
+
+<p>
+Ao final da aula, enviar email ao professor contendo o documento gerado com os printscreens. Para ver a pilha no gdb faca
+x/16 $sp
+</p>
+</div>
+</li></ul>
+</div>
+</div>
+
+<div id="outline-container-sec-9-3" class="outline-3">
+<h3 id="sec-9-3">Envie possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E8 e código fonte onde for necessário.</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-09&gt;</span></span>               - feriado (revolucao constitucionalista)</h2>
+</div>
+<div id="outline-container-sec-11" class="outline-2">
+<h2 id="sec-11"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-16&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-07-18&gt;</span></span> . E9: Hello World for bare metal</h2>
+<div class="outline-text-2" id="text-11">
+</div><div id="outline-container-sec-11-1" class="outline-3">
+<h3 id="sec-11-1">Planejamento:</h3>
+<div class="outline-text-3" id="text-11-1">
+<p>
+daqui para o final do curso, vamos utilizar a placa versatile emulada (similar ao evaluator7t mas emulada pelo qemu); comecando por uma placa sem absolutamente nada de software (bare metal), ou seja, sem o software que faz o boot.
+</p>
+
+<p>
+Leia:
+<a href="http://balau82.wordpress.com/2010/02/14/simplest-bare-metal-program-for-arm/">http://balau82.wordpress.com/2010/02/14/simplest-bare-metal-program-for-arm/</a>
+</p>
+
+
+<p>
+Lá lemos:
+In order to create a bare metal program we must understand what does the processor do when it is switched on. The ARM9 architecture begins to execute code at a determined address, that could be 0 (usually allocated to RAM) or 0xFFFF0000 (usually allocated to Read Only Memory). We must put some special code at that particular address: the interrupt vector table. 
+</p>
+
+<p>
+Pesquise e responda em uma folha de papel escrita a mão:
+</p>
+<ol class="org-ol">
+<li>Como o ARM9 decide se a primeira instrucao a executar está em zero ou em 0xFFFF0000? A resposta estah no site do ARM.
+</li>
+<li>Compile os códigos em casa antes da aula e tente rodar usando o arm-elf-� (gcc, gdb, etc. - normal que estamos usando) ao inves de arm-none-� que estah no post simplest-bare-metal-program-for-arm. Voce conseguiu observar o código usando arm-elf-gdb em casa? Voce conseguiu executar c<sub>entry</sub>?
+</li>
+<li>Pesquise na internet (manual do GNU) e responda na folha escrita a mão, o que faz test.ld? 
+</li>
+</ol>
+
+
+<pre class="example">ENTRY(_Reset)
+SECTIONS
+{
+ . = 0x0;
+ .text : {
+ startup.o (INTERRUPT_VECTOR)
+ *(.text)
+ }
+ .data : { *(.data) }
+ .bss : { *(.bss) }
+ . = . + 0x1000; /* 4kB of stack memory */
+ stack_top = .;
+}
+</pre>
+
+
+<p>
+O que significa em test.ld:
+</p>
+<pre class="example">3.1 - ENTRY(_Reset)
+3.2 - startup.o (INTERRUPT_VECTOR)
+3.3 - stack_top = .;
+3.4 - .bss : { *(.bss) }
+3.5 - . = . + 0x1000; /* 4kB of stack memory */
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-11-2" class="outline-3">
+<h3 id="sec-11-2">Experiencia</h3>
+<div class="outline-text-3" id="text-11-2">
+<p>
+Como a placa Versatile (similar ao evaluator7t do laboratorio) pode imprimir um "hello world" ao bootar?
+O processador ARM, ao ser ligado, passa a executar código a partir da posicao zero.
+Nessa posicao, vamos colocar o vetor de interrupcao.
+Para isso precisamos de gravar uma EPROM que contenha um jump na posicao zero para a rotina que imprime o hello world. Como não temos nenhum software, é necessário criar a rotina que faz a impressao da string via serial.
+Para essa experiencia, leia:
+</p>
+
+<p>
+<a href="http://balau82.wordpress.com/2010/02/28/hello-world-for-bare-metal-arm-using-qemu/">http://balau82.wordpress.com/2010/02/28/hello-world-for-bare-metal-arm-using-qemu/</a>
+Nesse post, o Balau explica como fazer a rotina C<sub>entry</sub> que nao contem nada para ser executada como se uma placa com o processador ARM9 estivesse sendo bootada. Ele mostra como fazer isso no simulador.
+</p>
+
+<p>
+<a href="http://balau82.wordpress.com/2010/02/14/simplest-bare-metal-program-for-arm/">http://balau82.wordpress.com/2010/02/14/simplest-bare-metal-program-for-arm/</a>
+Nesse post, o Balau explica como se imprime "Hello World" de uma Versatile emulada pelo qemu; porém com o código rodando a partir de 0x1000 e não a partir do zero como seria de se esperar do "bare metal" de fato.
+</p>
+
+
+<p>
+<a href="http://www.embedded.com/design/mcus-processors-and-socs/4007119/Building-Bare-Metal-ARM-Systems-with-GNU-Part-1--Getting-Started">http://www.embedded.com/design/mcus-processors-and-socs/4007119/Building-Bare-Metal-ARM-Systems-with-GNU-Part-1--Getting-Started</a>
+</p>
+
+<p>
+Um excelente artigo explicando como colocar software sobre o hardware usando GNU.
+</p>
+
+<p>
+Realize os passos abaixo para a aula de hoje. Em paralelo, construa um relatorio a ser enviado com o subject "labmicro E9" no fim da aual. Anexe código e printscreens do qemu, principalmente ao se constatar a mudanca de modo de processamento. 
+</p>
+
+<p>
+Para a aula faça:
+</p>
+</div>
+
+<div id="outline-container-sec-11-2-1" class="outline-4">
+<h4 id="sec-11-2-1">Rode o Simplest Bare Metal Program</h4>
+<div class="outline-text-4" id="text-11-2-1">
+<p>
+O grande objetivo da aula de hoje eh entender o vetor de interrupcao. Para a aula de hoje, ele deve obrigatoriamente ser posicionado em zero. 
+Uma forma de declarah-lo em assembly eh:
+</p>
+
+<pre class="example">.section INTERRUPT_VECTOR, "x"
+.global _Reset
+_Reset:
+  B Reset_Handler /* Reset */
+  B . /* Undefined */
+  B . /* SWI */
+  B . /* Prefetch Abort */
+  B . /* Data Abort */
+  B . /* reserved */
+  B . /* IRQ */
+  B . /* FIQ */
+ 
+Reset_Handler:
+  LDR sp, =stack_top
+  BL c_entry
+  B .
+</pre>
+<p>
+O vetor de interrupcao eh defindo pela ARM. 
+Quando a placa eh resetada, o PC eh colocado na posicao zero. Quando uma instrucao indefinida for encontrada dentro de um codigo, o PC recebe 4; quando ele executar uma instrucao SWI (ou svc), o PC recebe 8 e assim por diante. Por isso, devemos ter os Branchs (B) para o tratamento de cada excessao.
+</p>
+
+
+<p>
+Vamos rodar o programa em  <a href="http://balau82.wordpress.com/2010/02/14/simplest-bare-metal-program-for-arm/">http://balau82.wordpress.com/2010/02/14/simplest-bare-metal-program-for-arm/</a> usando <a href="http://linux-kernel-lab.blogspot.com/2018/04/basics-on-arm-processor.html">http://linux-kernel-lab.blogspot.com/2018/04/basics-on-arm-processor.html</a> . Nao serah necessario instalar nada, pois temos tudo nessa imagem (qemu e arm-none).
+</p>
+
+<p>
+e rode esse programa. O interessante é o startup.s que contém a inicializacao do vetor de interrupcao e faz o codigo rodar a partir da posicao zero.
+</p>
+
+<p>
+No README.md de <a href="https://github.com/EpicEric/gcc-arm.git">https://github.com/EpicEric/gcc-arm.git</a> lemos como gerar os programas e rodah-los: 
+</p>
+
+<pre class="example">### Regular program
+
+```
+eabi-gcc c_entry.c -o c_entry.o
+eabi-as startup.s -o startup.o
+eabi-ld -T vector_table.ld c_entry.o startup.o -o program.elf
+eabi-gdb program.elf
+```
+
+### Code on emulated board with QEMU
+
+```
+eabi-gcc c_entry.c -o c_entry.o
+eabi-as startup.s -o startup.o
+eabi-ld -T vector_table.ld c_entry.o startup.o -o program.elf
+eabi-bin program.elf program.bin
+qemu program.bin
+```
+
+In another terminal, open the same container with `./run_docker.sh` (without parameters).
+
+```
+eabi-qemu -se program.elf
+[gdb] break c_entry
+[gdb] continue
+[gdb] ...
+[gdb] quit
+pkill qemu
+</pre>
+
+<p>
+Siga os passos em <a href="http://balau82.wordpress.com/2010/02/14/simplest-bare-metal-program-for-arm/">http://balau82.wordpress.com/2010/02/14/simplest-bare-metal-program-for-arm/</a>
+e rode esse programa. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-11-2-2" class="outline-4">
+<h4 id="sec-11-2-2">Imprima "Hello World" na placa versatile emula pelo qemu</h4>
+<div class="outline-text-4" id="text-11-2-2">
+<p>
+A fim de imprimir "Hello World" usando o qemu (target remote:1234), vamos usar 2 posts do Balau:
+</p>
+
+<ol class="org-ol">
+<li><a href="http://balau82.wordpress.com/2010/02/28/hello-world-for-bare-metal-arm-using-qemu/">http://balau82.wordpress.com/2010/02/28/hello-world-for-bare-metal-arm-using-qemu/</a>
+<ul class="org-ul">
+<li>usa qemu e imprime string, endereco no vetor de interrupcao = 0x1000
+</li>
+</ul>
+</li>
+<li><a href="http://balau82.wordpress.com/2010/02/14/simplest-bare-metal-program-for-arm/">http://balau82.wordpress.com/2010/02/14/simplest-bare-metal-program-for-arm/</a> - usa simulador e nao imprime nada, endereco do vetor de interrupcao = zero.
+</li>
+</ol>
+
+<p>
+O que usa o simulador faz um print e o outro que usa o qemu nao printa nada. Por isso vamos rodar basicamente o segundo post, mas fazendo com que se imprima  "Hello World" como no primeiro post. Portanto, vamos seguir a risca a forma de rodar o codigo do post hello-world-for-bare-metal-arm-using-qemu passando o test.ld e startup.s (com endereco zero) do  segundo post para o primeiro.
+</p>
+
+
+<p>
+Observe que em
+<a href="http://balau82.wordpress.com/2010/02/28/hello-world-for-bare-metal-arm-using-qemu/">http://balau82.wordpress.com/2010/02/28/hello-world-for-bare-metal-arm-using-qemu/</a>
+</p>
+
+<p>
+o código passa a executar a partir de 0x1000 e não a partir do zero. Isso nao eh o que ocorre quando se faz o boot de uma placa. Provavelmente o Balau fez dessa forma, porque toda placa/simulador vem com um código em eprom que deve ser emulado que corresponde justamente ao código de boot. O que nos interessa nesse post eh a funcao print<sub>uart0</sub>.
+</p>
+
+
+<p>
+Observe que em
+<a href="http://balau82.wordpress.com/2010/02/14/simplest-bare-metal-program-for-arm/">http://balau82.wordpress.com/2010/02/14/simplest-bare-metal-program-for-arm/</a>
+o codigo estah escrito como acontece em uma placa de verdade, no caso a placa versatile que estah sendo emulada pelo qemu. Use test.ld (o ldscript) e statup.s desse post para fazer o código rodar a partir de 0x0 como acontece em uma placa real. Esse post nao explica como fazer a placa imprimir; por isso precisamos do primeiro post.
+Observe:
+</p>
+<ul class="org-ul">
+<li>o startup.s desse post contém o vetor de interrupcao na posicao zero. 
+</li>
+
+<li>Quando ativamos o gdb para se contectar com o qemu usando o alias eabi-qmeu; executamos o script em gcc-arm/docker/files/.gdbinit/qemu abaixo. Observe que esse script faz a contexao com o qemu via target remote e apos isso, faz load. Este load irah carregar o seu programa na posicao zero no lugar do firmware da placa.
+</li>
+</ul>
+<pre class="example">layout regs
+target remote localhost:1234
+load
+</pre>
+
+
+<ul class="org-ul">
+<li>usem o test.ld abaixo que coloca o vetor de interrupcao em zero; nao usem o test.ld que coloca na posicao 0x1000.
+</li>
+</ul>
+<pre class="example">ENTRY(_Reset)
+SECTIONS
+{
+ . = 0x0;
+ .text : {
+ startup.o (INTERRUPT_VECTOR)
+ *(.text)
+ }
+ .data : { *(.data) }
+ .bss : { *(.bss COMMON) }
+ . = ALIGN(8);
+ . = . + 0x1000; /* 4kB of stack memory */
+ stack_top = .;
+</pre>
+
+<p>
+Depois que conseguir imprimir "Hello World" usando o qemu, coloque um breakpoint antes de imprimir o "Hello World" e analise o cpsr. Qual é o modo em que o processador executa? Verifique se está em "Supervisor Mode". Qual é o valor de sp?
+</p>
+
+<p>
+Consulte o cpsr em:
+</p>
+<ul class="org-ul">
+<li><sup><a id="fnr.1.100" name="fnr.1.100" class="footref" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fn.1">1</a></sup> ARM Laboratory Exercises - apostila - <a href="http://courses.cs.tamu.edu/rabi/cpsc617/resources/ARM%20Lab%20Mannual.pdf">http://courses.cs.tamu.edu/rabi/cpsc617/resources/ARM%20Lab%20Mannual.pdf</a>
+</li>
+</ul>
+<p>
+no capitulo 1, item 1.6.4
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-11-2-3" class="outline-4">
+<h4 id="sec-11-2-3">tratando a instrucao invalida em startup.s</h4>
+<div class="outline-text-4" id="text-11-2-3">
+<p>
+Voltando para <a href="http://balau82.wordpress.com/2010/02/28/hello-world-for-bare-metal-arm-using-qemu/">http://balau82.wordpress.com/2010/02/28/hello-world-for-bare-metal-arm-using-qemu/</a>,
+crie a funcao Undefined em C que imprime a string "instrucao invalida!" e fique em um loop infinito. Pendure essa funcao no vetor de interrupcao na posicao correspondente a undefined instruction.
+Observe que dentro do gdb é necessário executar o "load"  após o "target". 
+</p>
+
+<p>
+Toda instrucao corresponde a uma word na memoria. Ex: "MOV R0,R1" corresponde a uma word que pode ser vista como um numero hexadecimal. Alguns numeros fazem sentido (podem ser executados) e outros nao fazem sentido. Por exemplo, a word 0xffffffff eh uma instrucao invalida.
+</p>
+
+<p>
+Coloque uma instrucao invalida (0xffffffff) em startup.s (com o startup.s inicializando o codigo em 0x0). 
+Para isso:
+</p>
+
+<pre class="example">Reset_Handler:
+	LDR sp, =stack_top
+	BL c_entry
+	.word 0xffffffff
+	B .
+</pre>
+
+<p>
+Rode o test.elf com a instrucao invalida. Observe se a string eh impressa. Talvez voce tenha visto um lixo sendo impresso ou o qemu tenha travado o talvez voce tenha visto tudo funcionando bem (por acaso). Vamos corrigir em seguida. 
+</p>
+
+<p>
+O possivel motivo do lixo impresso foi que o ponteiro de pilha sp no modo undefined nao foi inicializado. Veja a figura 1-2 do ARM Lab Manual. Observe os registradores no modo supervisor e no modo undefined. O registrador R0 no modo supervisor e no modo undefined sao os mesmos porque nao estao marcados (nao estao shaded), assim como a maioria dos outros registradores. Contudo, o registrador R13 (ou sp) e R14 sao diferentes, estao marcados/shaded, dependendo do modo, tanto que o SP no modo supervisor eh chamado de SP<sub>supervisor</sub> e no modo undefined SP<sub>undefined</sub>. Quando o processador passa de um modo para outro, ele passa a usar o SP correspondente ao modo e se ele nao estiver inicializado teremos mproblemas.
+</p>
+
+
+<p>
+Coloque um breakpoint antes e depois da instrucao invalida e analise o cpsr. Tente observar a mudanca de modo do processador. Conseguiram? Se sim, observe a mudanca no registrador sp (provavelmente o sp no modo Undefined está zerado ou com um valor qualquer. Verifique isso; portanto, qualquer alteracao de pilha nesse modo pode levar a erros com o sp errado). Se nao conseguiram, vejam o Undefined Handler no proximo item e observem a mudanca de modo dentro do Undefined Handler.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-11-2-4" class="outline-4">
+<h4 id="sec-11-2-4">Um Undefined Handler simples, porem errado.</h4>
+<div class="outline-text-4" id="text-11-2-4">
+<p>
+Pendure o seguinte Undefined<sub>Handler</sub> no vetor de interrupcao em startup.s (certifique-se de que o ld script coloca o codigo em 0x0):
+</p>
+<pre class="example">Undefined_Handler:
+	LDR sp, =stack_top
+	BL undefined
+</pre>
+
+<p>
+Coloque um breakpoint dentro do Undefined<sub>Handler</sub> para observar a mudanca de modo no registrador de status.
+</p>
+
+<p>
+Existem 2 erros nesse Undefined<sub>Handler</sub>
+</p>
+<ul class="org-ul">
+<li>a pilha nao deve ser inicializada a cada entrada na rotina de excessao. Veja o proximo item - a pilha no Undefined mode.
+</li>
+<li>o retorno estah errado.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-11-2-5" class="outline-4">
+<h4 id="sec-11-2-5">A pilha no Undefined mode.</h4>
+<div class="outline-text-4" id="text-11-2-5">
+<p>
+Quando o processador chaveia de modo, o registrador sp de um modo não é o mesmo registrador sp que no outro modo; por isso é necessário inicializar os sp's de todos os modos logo no reset da placa como visto na aula passada.
+Veja o item 1.6 "The ARM register set" da apostila de <sup><a id="fnr.1.100" name="fnr.1.100" class="footref" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fn.1">1</a></sup> e observe se existem outros registradores que variam conforme o modo do processador.
+Para evitar problema no uso da pilha no modo Undefined, é necessário que Reset<sub>Handler</sub> inicialize também o ponteiro de pilha SP<sub>UNDEF</sub> (registrador sp no modo undefined). Inicilize SP<sub>UNDEF</sub> com o valor 0x2000 e inicialize o SP<sub>SVC</sub> (do supervisor) em 0x1000. Para isso é necessário utilizar a instrucao MSR (Move to Status Register). 
+Usando MSR vah para o modo undefined e altere o SP. Esse SP no modo undefined (SP<sub>UNDEF</sub>) eh diferente do SP no modo supervisor. Depois volte ao modo supervisor.
+Descubra o número a ser carregado em MSR (observando principalmente o modo e desabilitando as interrupcoes. 
+Exemplo de como se altera a pilha:
+</p>
+
+<pre class="example">MRS r0, cpsr    @ salvando o modo corrente em R0
+MSR cpsr_ctl, #0b11011011 @ alterando o modo para undefined - o SP eh automaticamente chaveado ao chavear o modo
+LDR sp, =undefined_stack_top @ a pilha de undefined eh setada 
+MSR cpsr, r0 @ volta para o modo anterior
+</pre>
+
+
+
+<p>
+Pergunta:
+</p>
+<ul class="org-ul">
+<li>A pilha do Undefined eh inicializada onde?
+</li>
+</ul>
+<p>
+resposta:
+</p>
+<ul class="org-ul">
+<li>Reset<sub>Handler</sub> pois a pilha do Undefined nao deve ser alterada logo na entrada do Undefined<sub>Handler</sub> - o erro eh semelhante a alterar o topo da pilha ao chamar uma funcao!
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-11-2-6" class="outline-4">
+<h4 id="sec-11-2-6">Undefined handler</h4>
+<div class="outline-text-4" id="text-11-2-6">
+<p>
+Refaça o item anterior observando se sp é alterado corretamente na troca de modos.
+</p>
+
+<p>
+Crie o undefined handler em assembly de forma que ele salve e recupere os registradores. Veja:
+</p>
+
+<p>
+<a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0471c/Ciheidgb.html">http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0471c/Ciheidgb.html</a>
+</p>
+
+<p>
+Explique como o processador volta para o modo anterior ao sair do undefined handler.
+Rode o programa passo a passo observando os registradores e cpsr sendo salvos e recuperados.
+</p>
+
+<p>
+A instrucao:
+</p>
+<pre class="example">LDMFD sp!,{R0-R12,pc}^
+</pre>
+
+<p>
+serah a ultima a ser executada pelo undefined<sub>handler</sub>. Ela deve fazer com que o pc continue a partir da instrucao indefinida com o modo anterior (no caso supervisor). Como essa instrucao faz isso?
+</p>
+
+<p>
+Responda:
+</p>
+<ul class="org-ul">
+<li>por que tem um chapeuzinho no final da instrucao? Para que serve isso?
+</li>
+<li>por que essa instrucao nao salva os registradores sp (ou r13) e r14?
+</li>
+<li>se essa eh a primeira instrucao a ser executada, o sp jah deve ter sido inicializado. Quem fez isso? (voce jah deve ter feito isso logo quando a placa eh incializada usando a instrucao MSR para chavear o modo e inicializar o sp).
+</li>
+</ul>
+
+<p>
+Antes de escrever a instrucao de store que salva os registradores no comeco do undefined<sub>handler</sub> coloque um breakpoint na entrada do undefined<sub>handler</sub> e veja onde estah o endereco de retorno. Estah na pilha ou no registrador LR?
+Agora acerte o undefined<sub>handler</sub> com as instrucoes que armazenam e recuperam o estado da pilha com o STMFD.
+</p>
+
+<p>
+Agora, em seu codigo faca com que primeiro seja executada a instrucao indefinida e depois imprima o "Hello World" a fim de testar se o retorno do handler de undefined instruction estah funcionando. Apresente isso ao professor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-11-2-7" class="outline-4">
+<h4 id="sec-11-2-7">modo kernel x modo usuario</h4>
+<div class="outline-text-4" id="text-11-2-7">
+<p>
+Embora existam diversos modos no ARM, podemos classificar em usuário e o resto. Quando o ARM comeca a executar está em modo supervisor. Passe para o modo usuário usando MSR e tente voltar do modo usuário para supervisor também usando MSR. O que acontece? Por quê? Refaca a experiencia trocando entre modos dentro do resto (undefined, abort, supervisor, etc.). O que acontece? É possível concluir então que existem dois grandes modos: usuário e supervisor?
+</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-11-3" class="outline-3">
+<h3 id="sec-11-3">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E9.</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-12" class="outline-2">
+<h2 id="sec-12"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-23&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-07-25&gt;</span></span> . E10: interrupcao de tempo no Versatile emulado.</h2>
+<div class="outline-text-2" id="text-12">
+</div><div id="outline-container-sec-12-1" class="outline-3">
+<h3 id="sec-12-1">Planejamento:</h3>
+<div class="outline-text-3" id="text-12-1">
+<ul class="org-ul">
+<li>Estude partes do código em <a href="http://www.pcs.usp.br/~jkinoshi/2012/exp-int-versatile.pdf">http://www.pcs.usp.br/~jkinoshi/2012/exp-int-versatile.pdf</a>
+</li>
+<li>Junte o código em irq.s e compile.
+</li>
+<li>Apresente o código para o professor no comeco da aula.
+</li>
+<li>Em uma folha de papel escrita a mão:
+</li>
+</ul>
+<p>
+� Comente as partes em que o código está dividido e o que faz cada parte.
+� Como o timer eh programado? Como se define o intervalo entre interrupcoes?
+� Para que servem os registradores do timer e onde sao utilizados no programa (inicializacao no progama principal ou interrupt handler)?
+TIMER0L - load
+TIMER0V - value
+TIMER0C - control
+TIMER0X - clear
+� Para que servem os registradores da controladora de interrupcao e onde sao utilizados no programa (inicializacao no progama principal ou interrupt handler)?
+INTEN - enable
+INTPND - status
+INTSEL - select (FIQ, IRQ)
+</p>
+
+<p>
+� O que significa:
+</p>
+<pre class="example">LDR r0, INTEN
+LDR r1,=0x10 @bit 4 for timer 0 interrupt enable
+STR r1,[r0]
+</pre>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-12-2" class="outline-3">
+<h3 id="sec-12-2">Experiencia:</h3>
+<div class="outline-text-3" id="text-12-2">
+<p>
+No ano de 2011, a equipe do Lucas Estevam fez o seguinte documento:
+<a href="http://www.pcs.usp.br/~jkinoshi/2012/exp-int-versatile.pdf">http://www.pcs.usp.br/~jkinoshi/2012/exp-int-versatile.pdf</a>
+Este relatório possui várias coisas interessantes:
+</p>
+<ol class="org-ol">
+<li>qemu emulando uma placa versatile sem nada - sem linux, etc.
+</li>
+<li>o firmware que programa a interrupcao de timer da placa, cria o vetor de interrupcao, faz o vetor de interrupcao apontar para a rotina de tratamento de interrupcao, dispara o timer de forma a gerar a interrupcao. A rotina de interrupcao limpa o pedido de interrupcao.
+</li>
+<li>o ldscript permite que aloquemos código em posicoes fixas, em particular, na posicao definida pela ARM para o vetor de interrupcao.
+</li>
+<li>Eles nao estao usando o tootle chain que vimos na aula passada arm-none-eabi e sim o que usamos ao longo das aulas que foi o arm-elf. Ao lerem a apostila usem sempre o arm-none-eabi e em especial, arm-none-eabi-ld.
+</li>
+</ol>
+
+<p>
+O objetivo da aula é:
+</p>
+<ul class="org-ul">
+<li>observar o vetor de interrupcao definido pela ARM.
+</li>
+<li>observar como é feita a programacao do timer.
+</li>
+<li>observar como as interrupcoes sao habilitadas.
+</li>
+<li>observar como o pedido de interrupcao eh abaixado na rotina de interrupcao.
+</li>
+<li>observar como funciona o modo usuario e o modo supervisor e consequentemente como as pilhas de usuario e supervisor sao utilizadas.
+</li>
+</ul>
+
+
+<p>
+Na aula:
+</p>
+<ul class="org-ul">
+<li>Crie um relatorio em texto para ser enviado via email com o subject "labmicro E10" no final da aula:
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-12-3" class="outline-3">
+<h3 id="sec-12-3">Geracao do código</h3>
+<div class="outline-text-3" id="text-12-3">
+<ul class="org-ul">
+<li>Gere o código usando arm-none-eabi. Nao use  arm-none-linux-eabi e qualquer outro toolchain.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-12-4" class="outline-3">
+<h3 id="sec-12-4">Observacao sobre o codigo</h3>
+<div class="outline-text-3" id="text-12-4">
+</div><div id="outline-container-sec-12-4-1" class="outline-4">
+<h4 id="sec-12-4-1">teste do INTPND</h4>
+<div class="outline-text-4" id="text-12-4-1">
+<p>
+TST r0, #0x0010 @verifica se é uma interupção de timer
+BNE handler<sub>timer</sub> @vai para o rotina de tratamento da interupção de timer 
+</p>
+
+<p>
+A instrucao TST faz o ANDS bit a bit e seta a flag Z (usada pelo BNE) caso o resultado seja zero. O importante eh olhar se o bit estah setado. Se estiver, entao o resultado nao eh zero e por isso eh feito o desvio para o handler<sub>timer</sub>.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-12-5" class="outline-3">
+<h3 id="sec-12-5">Corrija os ERROS na apostila</h3>
+<div class="outline-text-3" id="text-12-5">
+</div><div id="outline-container-sec-12-5-1" class="outline-4">
+<h4 id="sec-12-5-1">O código da apostila não inicializa adequadamente as pilhas na placa versatile</h4>
+<div class="outline-text-4" id="text-12-5-1">
+<p>
+As pilhas no modo supervisor e no modo IRQ nao sao inicializadas. Com base na experiência da aula passada, ajuste isso; usando MSR. Se voce nao fizer isso, terah problemas graves ao ocorrerem as interrupcoes porque o codigo nao vai retornar para a posicao certa antes da interrupcao. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-12-5-2" class="outline-4">
+<h4 id="sec-12-5-2">O retorno de IRQ é feito de forma ERRADA</h4>
+<div class="outline-text-4" id="text-12-5-2">
+<p>
+Observe o codigo
+</p>
+<pre class="example">do_irq_interrupt: @Rotina de interrupções IRQ
+   STMFD sp!, {r0 - r3, LR}
+   @Empilha os registradores
+   LDR r0, INTPND @Carrega o registrador de status de interrupção 
+   LDR r0, [r0]
+   TST r0, #0x0010 @verifica se é uma interupção de timer
+   BNE handler_timer @vai para o rotina de tratamento da interupção de timer
+   LDMFD sp!, {r0 - r3,lr}
+   mov pc, r14
+   @retorna
+</pre>
+
+<p>
+O retorno do IRQ está errado em:
+</p>
+<pre class="example">mov pc, r14
+</pre>
+
+<p>
+r14 é o LR.
+O LR é automaticamente setado pelo processador ARM quando ocorre a IRQ; porém da seguinte forma:
+LR = endereco<sub>de</sub><sub>retorno</sub> + 4
+devido ao pipeline. Para resolver isso é necessário fazer retirar 4 de LR.
+</p>
+
+<ul class="org-ul">
+<li>Obs - logo ao entrar na rotina de interrupcao, observe para qual instrucao o LR aponta atraves de:
+</li>
+</ul>
+<pre class="example">x/i $lr
+</pre>
+<p>
+depois de subtrair 4 de LR, observe novamente
+</p>
+<pre class="example">x/i $lr
+</pre>
+<p>
+Agora faz sentido? 
+Isso ocorre por que a propria ARM define assim; meu chute eh pelo pipeline que andou no irq, mas nao andou no undefined (visto na aula passada). 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-12-5-3" class="outline-4">
+<h4 id="sec-12-5-3">Problema ao recuperar o cpsr anterior</h4>
+<div class="outline-text-4" id="text-12-5-3">
+<p>
+As duas instruções:
+</p>
+<pre class="example">LDMFD sp!, {r0 - r3,lr}
+mov pc, r14
+</pre>
+
+<p>
+não recuperam o cpsr anterior. Isso acarreta um problema. O CPSR contém um bit que diz se o processador atende as interrupcoes IRQ ou não. Logo quando ocorre a interrupcao o bit I do cpsr eh zerado para desabilitar que uma interrupcao ocorra dentro de outra. Como o CPSR nao retorna ao valor anterior, ele permanece com as interrupcoes desabilitadas.
+Com base nessa informacao, altere o código de forma a que a rotina de interrupcao IRQ TERMINE com:
+</p>
+<pre class="example">LDMFD sp!,{R0-R12,pc}^
+</pre>
+
+<p>
+como vimos na aula passada e explicado em 
+<a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0471c/Ciheidgb.html">http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0471c/Ciheidgb.html</a>
+</p>
+
+<ul class="org-ul">
+<li>Obs1: vários alunos trocaram a instrucao  LDMFD sp!,{R0-R12,pc}^ por algo como  LDMFD sp!,{R0-R12,lr}^ e depois alteraram o pc. Isso nao funciona pois o modo de operacao (e pilhas e backed registers) jah foram alterados. Eh obrigatorio executar LDMFD sp!,{R0-R12,pc}^ para retornar da rotina de interrupcao.
+</li>
+
+<li>Obs2: Se sua equipe nao estiver conseguindo retornar da interrupcao rodando  LDMFD sp!,{R0-R12,pc}^ observe a pilha. Coloque um breakpoint nessa instrucao e examine como estah a pilha observando o sp. Os valores que estao na pilha correspondem aos que serao colocados nos registradores, e em especial no pc? O retorno deve ser para o loop infinito do programa principal. Esse endereco de retorno estah de fato na pilha? Ao observar o endereco de retorno na pilha, voce pode observar a instrucao que serah executada atraves do comando do debugger x/i ENDERECO.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-12-5-4" class="outline-4">
+<h4 id="sec-12-5-4">Polemica - BNE x BLNE</h4>
+<div class="outline-text-4" id="text-12-5-4">
+<p>
+Alguns alunos consideraram que o mais correto eh usar BLNE ao inves de BNE.
+Isso nao eh necessario, depende de como handler<sub>timer</sub> retorna. A ideia da apostila era retornar para o loop do programa principal diretamente, portanto nao cosideramos isso como um erro da apostila. Contudo, o codigo da apostila nao estah elegante. O melhor eh fazer como no codigo abaixo usando BLNE e fazer handler<sub>timer</sub> retornar para quem chamou ao inves de fazer LDMFD.
+</p>
+
+<pre class="example">do_irq_interrupt: @Rotina de interrupções IRQ
+   STMFD sp!, {r0 - r3, LR}
+   @Empilha os registradores
+   LDR r0, INTPND @Carrega o registrador de status de interrupção 
+   LDR r0, [r0]
+   TST r0, #0x0010 @verifica se é uma interupção de timer
+   BLNE handler_timer @vai para o rotina de tratamento da interupção de timer
+   LDMFD sp!, {r0 - r3,lr}
+   mov pc, r14    @retorna
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-12-6" class="outline-3">
+<h3 id="sec-12-6">Observe e faça pequenas alteracoes no codigo em assembly</h3>
+<div class="outline-text-3" id="text-12-6">
+</div><div id="outline-container-sec-12-6-1" class="outline-4">
+<h4 id="sec-12-6-1">examine no debuguer:</h4>
+<div class="outline-text-4" id="text-12-6-1">
+<ul class="org-ul">
+<li>debugue o codigo: rode até a instrucao  LDMFD sp!,{R0-R12,pc}^ e examine a pilha. Verifique se o valor a ser carregado em PC está correto.
+</li>
+
+<li>Coloque um breakpoint logo no início da interrupcao de timer, o mais perto possivel do vetor de interrupcao, e rode até lá. Qual é o modo em que o processador roda? Qual é o sp? O que se vê na pilha? Como o PC é salvo na chamada da interrupcao?
+</li>
+
+<li>Como o processador chaveia de modo ao sair da rotina de interrupcao? Verifique isso localizando a instrucao que faz isso. Quando estamos debugando passo a passo e observamos que o processador sai da rotina de interrupcao, pode acontecer do timer da maquina virtual continuar marcando o tempo e como nós seres humanos somos muito mais lentos que a máquina, é bem provável que logo ao sair da rotina de interrupcao, já tenha ocorrido outra interrupcao de timer. Verifique se isso acontece. 
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-12-6-2" class="outline-4">
+<h4 id="sec-12-6-2">desabilite as instrucoes</h4>
+<div class="outline-text-4" id="text-12-6-2">
+<ul class="org-ul">
+<li>Qual é a instrucao que habilita as interrupcoes? Desabilite as interrupcoes no cpsr e rode. O que acontece? Voce acha razoavel habilitar as interrupcoes enquanto se programa o timer? De fato isso nao eh razoavel, primeiro deve-se programar o timer para depois habilitar as interrupcoes. Isto eh: alterar cpsr zerando o bit I deve ser a ultima operacao a ser feita. Altere isso no codigo. Veja se funciona.
+</li>
+<li>Se tudo estiver correto, anexe esse código no email a ser enviado ao professor.
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-12-6-3" class="outline-4">
+<h4 id="sec-12-6-3">endereco do vetor de interrupcao</h4>
+<div class="outline-text-4" id="text-12-6-3">
+<ul class="org-ul">
+<li>Como o código definiu o vetor de interrupcao? Responda relacionando com o ARM e o ldscript.
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-12-6-4" class="outline-4">
+<h4 id="sec-12-6-4">timer, inicializacao</h4>
+<div class="outline-text-4" id="text-12-6-4">
+<ul class="org-ul">
+<li>Observe como foi feita a programacao do timer em timer<sub>init</sub>. A apostila faz 
+</li>
+</ul>
+
+<pre class="example">timer_init:
+ mrs r0, cpsr
+ bic r0,r0,#0x80
+ msr cpsr_c,r0 @enabling interrupts in the cpsr
+ LDR r0, INTEN
+ LDR r1,=0x10 @bit 4 for timer 0 interrupt enable
+ STR r1,[r0]
+ LDR r0, TIMER0C
+ LDR r1, [r0]
+ MOV r1, #0xA0 @enable timer module
+ STR r1, [r0]
+ LDR r0, TIMER0V
+ MOV r1, #0xff @setting timer value
+ STR r1,[r0]
+ mov pc, lr
+</pre>
+
+<p>
+mais especificamente:
+</p>
+
+
+<pre class="example">LDR r0, TIMER0V
+MOV r1, #0xff @setting timer value
+STR r1,[r0]
+</pre>
+
+<p>
+Isso nao estah de acordo com a documentacao em <a href="http://infocenter.arm.com/help/topic/com.arm.doc.ddi0271d/DDI0271.pdf">http://infocenter.arm.com/help/topic/com.arm.doc.ddi0271d/DDI0271.pdf</a> 
+pois o registrador TIMER0V eh para se ler o valor do timer, enquanto o registrador TIMER0L eh para se fazer a carga do valor inicial. Assim, consideramos que a programacao correta do timer deveria ser:
+</p>
+
+<pre class="example">LDR r0, TIMER0L
+MOV r1, #0xff @setting timer value
+STR r1,[r0]
+</pre>
+
+
+<ul class="org-ul">
+<li>Qual é o modo em que o processador roda logo no início enquanto o timer está sendo configurado? Qual registrador deve ser observado? Qual é sp utilizado?
+</li>
+</ul>
+
+<p>
+O Mitsuo/2018 pensou no modo e na sequencia de programacao do timer, de tal forma que a alteracao do TIMER0L, altera o intervalo das interrupcoes. Troque o timer<sub>init</sub> no seu codigo pelo codigo abaixo e faca experiencias alterando o valor de TIMER0L.
+</p>
+<pre class="example">timer_init:
+ LDR r0, INTEN
+ LDR r1,=0x10 @bit 4 for timer 0 interrupt enable
+ STR r1,[r0]
+ LDR r0, TIMER0L
+ LDR r1, =0xffffff @setting timer value
+ STR r1,[r0]
+ LDR r0, TIMER0C
+ MOV r1, #0xE0 @enable timer module
+ STR r1, [r0]
+ mrs r0, cpsr
+ bic r0,r0,#0x80
+ msr cpsr_c,r0 @enabling interrupts in the cpsr
+ mov pc, lr
+</pre>
+
+<p>
+Obs: o timer pode ser configurado como "periodic" (interrompe de tempo em tempo) ou "free running" (interrompe apenas uma vez). O valor para periodic no site estah como 1, mas a equipe do Elton,Helio,Mafra-19 observaram que ocorre o contrario: o valor para periodic deve ser zero. Essa disnticao entre "free running" e "periodic"  funciona ao usar o registrador TIMER0V. Quando o registrador TIMER0L recebe um valor, entao, sempre interrompe periodicamente.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-12-6-5" class="outline-4">
+<h4 id="sec-12-6-5">Fazendo o tratamento da interrupcao em C.</h4>
+<div class="outline-text-4" id="text-12-6-5">
+<p>
+O código está todo em assembly, mas é possível codificar parte dele em C. Para isso precisamos de seguir diversos passos: 
+</p>
+
+<ul class="org-ul">
+<li>observe o código de handler<sub>timer</sub>:
+</li>
+</ul>
+
+<pre class="example">handler_timer:
+	LDR r0, TIMER0X
+	MOV r1, #0x0
+	STR r1, [r0] @clear timer interrupt
+
+	@ do whatever you want with the timer here
+
+	LDMFD   sp!, {r0 - r3,lr}	 
+	mov pc, r14
+</pre>
+
+<p>
+A instrucao mov pc, r14 corresponde ao retorno de do<sub>irq</sub><sub>interrupt</sub> (feito de forma errada) e não de handler<sub>timer</sub>. 
+</p>
+
+<ul class="org-ul">
+<li>Altere o código assembly para que handler<sub>timer</sub> seja uma rotina chamada em do<sub>irq</sub><sub>interrupt</sub> através de:
+</li>
+</ul>
+<p>
+BLNE handler<sub>timer</sub>; ou seja, handler<sub>timer</sub> deverá se comportar como uma rotina normal que retorna para quem a chamou (e nao como um endereco para onde o codigo eh desviado e nao retorna). Verifique usando o qemu+gdb se voce consegue entrar na rotina handler<sub>timer</sub>. 
+</p>
+
+<ul class="org-ul">
+<li>Crie dois arquivos assembly irq.s e handler.s contendo handler<sub>timer</sub>; verifique se funciona, observando duas ou mais interrupcoes de relogio e observe se o sp não está variando a cada chamada - se não está gradativamente empilhando coisas. 
+</li>
+</ul>
+<p>
+Observe que ao linkar, a ordem com que se colocam os objetos irq.o e handler.o eh extremamente importante. Deve-se colocar primeiro o codigo que contenha o vetor de interrupcao.  
+</p>
+
+<ul class="org-ul">
+<li>Depois recodifique handler<sub>timer</sub> em C. Ao fazer isso, declare um pointer em C referente a TIMER0X de forma a colocar o valor zero nessa posicao de memoria a fim de baixar o pedido de interrupcao. Nao eh preciso aproveitar a definicao de TIMER0X do assembly; eh muito mais facil declarar o ponteiro direto em C.
+</li>
+</ul>
+<p>
+Obs: para exportar o nome handler<sub>timer</sub> eh necessario usar .global
+</p>
+
+
+<ul class="org-ul">
+<li>A partir de agora, ao ativar o qemu retire a opcao que "mata" a serial: -serial /dev/null, pois caso contrário, voce não verá os caracteres na tela. 
+</li>
+
+<li>Misture o codigo dessa experiencia com a da aula passada a fim de que o programa imprima uma vez "Hello World" no program principal, antes mesmo de programar o timer. 
+</li>
+
+<li>Usando a experiência passada, faça com que o handler<sub>timer</sub> em C imprima o digito "#" a cada interrupcao.
+</li>
+
+<li>Altere o programa principal para que ele fique em um loop continuamente imprimindo o digito " " (espaco) de tempo em tempo (fique em um loop para gastar tempo). Assim, na tela voce deverá ver " "s e "#"s intercalados. 
+</li>
+
+<li>O que acontece se nao retirarmos o pedido de interrupcao na rotina que trata a interrupcao? Experimente deixando o programa rodar e explique. A frequencia com que os caracteres sao impressos varia se nao retirarmos o pedido de interrupcao? Ou seja, a relacao entre " "s e "#"s foi alterada? Explique no relatorio. Rode o programa de uma vez sem breakpoints. Em pelo menos uma equipe, aconteceu do resultado ser diferente rodando passo a passo pois nesse caso, o 1 e 2 eram intercalados enquanto que rodando de uma vez o resultado era o esperado (somente a rotina de interrupcao imprimia).
+</li>
+</ul>
+
+<p>
+IMPORTANTE: Nao saia da aula sem apresentar os ' 's e '#' sendo impressos.
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-12-7" class="outline-3">
+<h3 id="sec-12-7">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: labmicro E10.</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-13" class="outline-2">
+<h2 id="sec-13"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-30&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-08-01&gt;</span></span> . E11: Chaveamento entre 2 processos.</h2>
+<div class="outline-text-2" id="text-13">
+</div><div id="outline-container-sec-13-1" class="outline-3">
+<h3 id="sec-13-1">Planejamento:</h3>
+<div class="outline-text-3" id="text-13-1">
+<p>
+Escreva o codigo de um programa numa folha de papel a mao que salva e recupera todos os registradores, inclusive PC, SP, LR e CPSR do processo que sofreu a interrupção. Para isso,
+</p>
+<ul class="org-ul">
+<li>caso seu grupo nao tenha rodado a experiencia da aula passada, continue ateh ver os "1"s (da interrupacao) e "2"s (do programa principal) intercalados.
+</li>
+
+<li>Crie uma estrutura de dados (um espaco na memoria), linhaA, onde voce deverah salvar todos os registradores r0-r12 ao entrar e sair da rotina de interrupcao. Rode e teste isso em casa.
+</li>
+
+<li>Aumente essa estrutura de dados para armazenar os outros registradores: PC do programa principal, LR do programa principal, SP do programa principal e CPSR do programa principal. 
+Os outros registradores LR, SP, PC e CPSR provém de fonte diferente (veja: <a href="http://aelmahmoudy.users.sourceforge.net/electronix/arm/chapter3.htm">http://aelmahmoudy.users.sourceforge.net/electronix/arm/chapter3.htm</a>)
+</li>
+<li>- CPSR/supervisor está salvo em SPSR/IRQ.  
+</li>
+
+<li>- PC/supervisor está salvo em LR/IRQ; melhor dizendo: PC/supervisor = LR/irq - 4
+</li>
+</ul>
+<p>
+Obtenha esses registradores e armazena em linhaA. Uma ideia eh, logo ao entrar na interrupcao de relogio, salvar o PC do processo, ou seja, salvar LR/IRQ -4 (pode ser em memoria numa variavel declarada por voce), liberando LR para outros usos. 
+</p>
+
+<ol class="org-ol">
+<li>- LR e SP são banked registeres (ver pag 1.7 da apostila Lab Manual).
+</li>
+</ol>
+<p>
+Para obter o LR e o SP do modo supervisor use as instrucoes que alteram o modo do processador
+MRS R0,CPSR           ; or SPSR
+MSR CPSR,R0           ; or SPSR 
+</p>
+
+<p>
+Tome cuidado ao usar MSR e MRS pois, ao chavear de modo, vc. pode acabar sujando registradores como o spsr; alem disso, lembre-se que o CPSR contem o bit I onde zero em I habilita as interrupcoes. Voce deverah alterar os modos para pegar LR e SP com as interrupcoes desabilitadas. Coloque os bits I e F em 1 (desabilitando as interrupcoes) na posicao correspondente em R0 ao fazer  MSR CPSR,R0
+</p>
+
+<p>
+linhA eh uma estrutura que possui 17 registradores (R0-15 + cpsr) de 4 bytes, portanto possui 17*4 = 68 bytes. Cada um dos registradores da taskA poderia ser acessado individualmente. Por exemplo: R0 estah em linhaA, R1 em linhaA+4 e assim por diante. 
+</p>
+
+<ul class="org-ul">
+<li>Reescreva o código de forma que na interrupcao de relogio, salve todos os registradores (incluindo LR, SP, PC, CPSR) e os recupere (como se fosse o chaveamento de um processo apenas).
+</li>
+
+<li>Compile e execute o código em casa. Observe os 1s e 2s sendo impressos.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-13-2" class="outline-3">
+<h3 id="sec-13-2">Objetivo:</h3>
+<div class="outline-text-3" id="text-13-2">
+<ul class="org-ul">
+<li>Usar a interrupcao do timer para chavear entre duas tarefas. Crie uma tarefaA que continuamente imprime "1" e uma tarefaB que imprime "2". 
+</li>
+<li>Vamos criar um nanokernel que faz esse chaveamento: 
+</li>
+</ul>
+<p>
+� carregue o vetor de interrupcao.
+� No reset, faca a inicializacao da controladora de interrupcoes e do timer.
+� A rotina de interrupcao do timer deve fazer o chaveamento entre as tarefas; para isso ela deverá salvar o estado do processo corrente em uma estrutura de dados que vamos chamar de tabela de processos. Ao sair da rotina de interrupcao, os registradores do outro processo devem ser recuperados. 
+</p>
+
+<p>
+Para isso:
+</p>
+<ul class="org-ul">
+<li>Rode o programa que voce trouxe no planejamento. Voce consegue ver todos os registradores salvos adequadamente? Consegue observar a pilha do supervisor e a pilha do IRQ?
+</li>
+<li>Além de linhaA, declare o espaco linhaB para a taskB.
+</li>
+<li>A rotina de interrupcao deve observar o processo que estah rodando. Se for a tarefaA rodando, salva o estado na linha da tabela de processos da tarefaA e recupera o estado da linha da tarefaB e de forma semelhante para a tarefaB. Para isso, declare a variavel nproc (global) que contem o numero do processo rodando (0 para A e 1 para B).
+</li>
+<li>reserve uma area de pilha para cada processo. Isto eh: quando a taskA for rodar, ela deverah passar a rodar com o SP em um certo valor e quando a taskB for rodar, ela deverah passar a rodar com o SP em outro valor. Para isso voce deverah disparar a taskA em modo supervisor com seu SP e CPSR jah setados adequadamente pela inicializacao do programa principal; mas tanto para a taskA quanto para a taskB, deixe o SP, PC e CPSR correspondentes armazenados corretamente em linhaA e em linhaB.
+</li>
+<li>O programa principal deixa de ser o loop infinito. A taskA jah sai rodando logo na inicializacao. De tal forma que quando ocorrer a primeira interrupcao de tempo, a taskB passa a rodar.
+</li>
+<li>Para a taskB entrar rodando eh necessario que seus registradores estejam inicializados corretamente na estrutura de dados linhaB. Entre os valores principais para serem inicializados temos: PC, SP e CPSR. Inicilizar o CPSR de forma errada, com as interrupcoes desabilitadas, irah 'travar' tudo.
+</li>
+<li>Ao rodar o programa, é de se esperar que saiam "1"s e "2"s intercalados.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-13-3" class="outline-3">
+<h3 id="sec-13-3">Envie o codigo fonte e possiveis comentarios dos exercicios no final da aula via email, subject: lab micro E11.</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-14" class="outline-2">
+<h2 id="sec-14"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-08-06&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-08-08&gt;</span></span> Prova 2</h2>
+<div class="outline-text-2" id="text-14">
+</div><div id="outline-container-sec-14-1" class="outline-3">
+<h3 id="sec-14-1">preparacao</h3>
+<div class="outline-text-3" id="text-14-1">
+<p>
+A prova serah individual com o objetivo de verificar a capacidade do aluno de lidar com o ambiente que temos visto no laboratorio. 
+Exemplo:
+</p>
+<ul class="org-ul">
+<li>pedir ao aluno para entrar na rotina de interrupcao e mostrar qual a proxima instrucao que o processador iria executar se nao tivesse interrompido (para onde a rotina de interrupcao deve retornar).
+</li>
+<li>pedir ao aluno para mostrar a pilha logo ao entrar na rotina de interrupcao. Essa pilha eh igual aa pilha que estava sendo usada? Se era diferente, como voce faria para localizar essa pilha?
+</li>
+<li>antes da interrupcao, quais eram os registradores que estavam sendo usados? Como esses registradores devem ser salvos para guardar o estado do processo. Explique o motivo de como eles sao salvos.
+</li>
+<li>onde o estado do processo eh salvo? A area de memoria onde o estado eh salvo estah declarada em C ou em assembly? Declare novamente em C (ou declare novamente em assembly).
+</li>
+<li>mostre como o timer estah sendo usado. 
+</li>
+<li>coloque o programa principal em C.
+</li>
+<li>o que aconteceria se nao baixássemos o pedido de interrupcao?
+</li>
+<li>O que acontece se retirarmos o chapeuzinho ^ da instrucao que retorna da rotina de interrupcao? Alias, o que faz essa instrucao?
+</li>
+</ul>
+
+<p>
+Além disso posso pedir na prova pequenas alteracoes no codigo como:
+1 - Alem dos dois processos, insira um terceiro processo em C para rodar num codigo separado.
+2 - faca a inicializacao da pilha do modo abort tambem e coloque um processo rodar no modo abort e outro processo no modo supervisor.
+3 - Alem dos dois processos, insira um terceiro processo em assembly para rodar em codigo separado que imprime continuamente de 1 a 5.
+</p>
+
+<p>
+4 -  Altere um processo (pode ser um dos dois processos) inserindo uma instrucao indefinida e coloque para rodar. Coloque o tratamento para instrucao indefinida que imprime o numero do processo rodando que causa a excessao.
+5 - faça com que o processo 1 execute duas vezes mais que o processo 2.
+6 - coloque um processo que imprime de 1 a 6 fazendo com que o processo chame uma funcao recursiva. Pode ser um dos dois processos que jah estao rodando.
+</p>
+
+<p>
+para a prova, jah venham com o codigo de chaveamento entre 2 processos funcionando.
+estudem bem as 3 ultimas experiencias: 10, 11, 12.
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="outline-container-sec-15" class="outline-2">
+<h2 id="sec-15">Avaliacao:</h2>
+<div class="outline-text-2" id="text-15">
+<p>
+Nota Final = (Fase1 + 2*Fase2)/3
+</p>
+
+<p>
+Fase1 = (E2+E3+E4+E5+E6)/5 * 0.2 + 0.8 * P1
+Fase2 = (E7+E8+E9+E10+E11)/5 * 0.2 + 0.8 * P2
+</p>
+
+<p>
+Avaliação por experiência:
+</p>
+<ul class="org-ul">
+<li>Penalidade = -1 por atraso de 15 minutos
+</li>
+<li>Penalidade = -4 por atraso de 1 hora.
+</li>
+</ul>
+<p>
+A avaliacao será feita individualmente:
+</p>
+<ul class="org-ul">
+<li>o aluno tem conhecimento do planejamento? Sabe explicar o código?
+</li>
+<li>tem participado continuamente da aula; ou seja, os alunos tem se revezado no computador? Caso um aluno monopolize a aula, os outros serão penalizados.
+</li>
+</ul>
+
+<p>
+Ao término de cada experiência enviar código para o professor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-16" class="outline-2">
+<h2 id="sec-16">Referências:</h2>
+<div class="outline-text-2" id="text-16">
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fnr.1">1</a></sup> <p class="footpara">
+ARM Laboratory Exercises - apostila - <a href="http://courses.cs.tamu.edu/rabi/cpsc617/resources/ARM%20Lab%20Mannual.pdf">http://courses.cs.tamu.edu/rabi/cpsc617/resources/ARM%20Lab%20Mannual.pdf</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fnr.2">2</a></sup> <p class="footpara">
+ARM Assembly Language Fundamentals and Techniques, William Hohl, CRC Press
+</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fnr.3">3</a></sup> <p class="footpara">
+<a href="http://www.billgatliff.com/gettingStarted.html">http://www.billgatliff.com/gettingStarted.html</a> : Uma apostila que explica o ambiente GNU para a placa evaluator 7t
+</p></div>
+
+<div class="footdef"><sup><a id="fn.4" name="fn.4" class="footnum" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fnr.4">4</a></sup> <p class="footpara">
+<a href="http://www.gnu.org/manual/manual.html">http://www.gnu.org/manual/manual.html</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.5" name="fn.5" class="footnum" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fnr.5">5</a></sup> <p class="footpara">
+<a href="http://www.microcross.com/gnu-arm7t-microcross.pdf">http://www.microcross.com/gnu-arm7t-microcross.pdf</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.6" name="fn.6" class="footnum" href="https://www2.pcs.usp.br/~jkinoshi/2019/labmicro-19.html#fnr.6">6</a></sup> <p class="footpara">
+<a href="http://bel.gsi.de/scripts/gnu-arm-assy-quick-ref.pdf">http://bel.gsi.de/scripts/gnu-arm-assy-quick-ref.pdf</a>
+</p></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: jk</p>
+<p class="date">Created: 2019-07-31 qua 12:07</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.2.2 (<a href="http://orgmode.org/">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+
+
+</body></html>
