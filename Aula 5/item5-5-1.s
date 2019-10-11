@@ -1,0 +1,19 @@
+    	.text
+       	.globl    main
+main:	MOV	r0, #0
+		LDR	r3, =a
+		LDR r4, =b
+loop:	CMP	r0, #32
+		BGE	out
+		RSB	r1, r0, #28
+		LDR	r2, [r4, r1] 
+		STR	r2, [r3, r0]	
+		ADD	r0, r0, #4
+		B	loop
+
+a:
+	.word 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7,0x8
+b:
+	.word 0xF, 0xE, 0xD, 0xC, 0xB, 0xA, 0x9, 0x11
+
+out:		SWI	=0x0	
